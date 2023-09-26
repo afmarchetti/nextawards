@@ -1396,7 +1396,7 @@ function nextawards_customize_css_iframe_editor() {
 		wp_enqueue_style( 'nextawards-admin-google-font' );
 
 		/* Backend Css Custom */
-		wp_enqueue_style( 'custom-editor-style', get_template_directory_uri() . 'custom-editor-style.css');
+		wp_enqueue_style( 'custom-editor-style', get_template_directory_uri() . '/custom-editor-style.css');
 			$nextawards_font = esc_attr(get_theme_mod( 'nextawards_google_font', 'Barlow'));
 			$nextawards_link_color = esc_attr(get_theme_mod( 'nextawards_link_color', '#048ea0'));
 			$nextawards_bg_color = get_background_color();
@@ -1404,7 +1404,7 @@ function nextawards_customize_css_iframe_editor() {
 				.editor-styles-wrapper .wp-block-post-title,
 			    .editor-styles-wrapper .wp-block-heading,
 			    .editor-styles-wrapper .wp-block { 
-					font-family: {$nextawards_font}
+					font-family: {$nextawards_font};
 				}
 				.editor-styles-wrapper{background: #{$nextawards_bg_color} ;}
 				.edit-post-visual-editor .editor-styles-wrapper .wp-block-button__link,

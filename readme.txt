@@ -41,6 +41,9 @@ No data is saved in the database or transferred.
 
 == Changelog ==
 
+= 1.4.3 =
+* fix font preview in backend
+
 = 1.4.2 =
 * add scroll to to activate the scroll add a .scroll class to the button and use a link with hastag ancor to the element #exmaple
 * fix css single product
