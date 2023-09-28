@@ -37,6 +37,9 @@ No data is saved in the database or transferred.
 
 
 == To Do ==
+* fix related post float go up in description
+* fix input width 100% checkbox in comment form and login woo form
+* add font system with arial paragraph
 * add search header woocommerce
 
 == Changelog ==
