@@ -1452,7 +1452,7 @@ if (  class_exists( 'WooCommerce' ) ) {
 
 		$output .= '<a href="'. esc_url( $url ) .'" class="menu-cart-total">';
 
-			$output .= $icon . wp_kses_post( $cart_count );
+			$output .= $icon . '<span>'. wp_kses_post( $cart_count ).'</span>';
 
 		$output .= '</a>';
 

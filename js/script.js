@@ -16,7 +16,7 @@ window.addEventListener('scroll', function() {
 });
 
 /* Dropdown menu mobile */
-if (window.innerWidth < 998) {
+if (window.innerWidth < 1024) {
 	let items = document.querySelectorAll('.menu-item-has-children > a');
 	items.forEach((item) => {
 		item.addEventListener("click", function(e) {
