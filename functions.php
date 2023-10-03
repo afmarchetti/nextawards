@@ -1145,7 +1145,21 @@ add_action( 'wp_enqueue_scripts', 'nextawards_scripts' );
 if ( ! function_exists( 'nextawards_styles' ) ) {
 
 	function nextawards_styles() {
-		wp_enqueue_style( 'nextawards-google-font','//fonts.googleapis.com/css?family='.esc_attr(get_theme_mod( "nextawards_google_font", "Barlow")).':'.esc_attr(get_theme_mod( "nextawards_google_font_weight", "300,400,700")));
+
+		$nextawards_google_font_headings = esc_attr(get_theme_mod( "nextawards_google_font", "Barlow"));
+		$nextawards_google_font_body = esc_attr(get_theme_mod( "nextawards_google_font_body", "Barlow"));
+
+		if($nextawards_google_font_headings == $nextawards_google_font_body ){
+
+			wp_enqueue_style( 'nextawards-google-font','//fonts.googleapis.com/css?family='.$nextawards_google_font_headings.':'.esc_attr(get_theme_mod( "nextawards_google_font_weight", "300,400,700")));
+
+		} else {
+
+			wp_enqueue_style( 'nextawards-google-font','//fonts.googleapis.com/css?family='.$nextawards_google_font_headings.':'.esc_attr(get_theme_mod( "nextawards_google_font_weight", "300,400,700")));
+			wp_enqueue_style( 'nextawards-google-font-body','//fonts.googleapis.com/css?family='.$nextawards_google_font_body.':400,700');
+
+		}
+		
 		wp_enqueue_style( 'nextawards', get_template_directory_uri().'/style.css');
 
 	}
@@ -1191,7 +1205,7 @@ function nextawards_customize_register( $wp_customize ) {
 	));
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'nextawards_google_font_control', array(
-		'label'      => __( 'Google Font (ex. Roboto )', 'nextawards' ),
+		'label'      => __( 'Google Font Headings (ex. Roboto )', 'nextawards' ),
 		'section'    => 'nextawards_typography',
 		'settings'   => 'nextawards_google_font',
 		'type'   => 'text'			
@@ -1208,6 +1222,20 @@ function nextawards_customize_register( $wp_customize ) {
 		'label'      => __( 'Font Weight (ex. 300,400,700 )', 'nextawards' ),
 		'section'    => 'nextawards_typography',
 		'settings'   => 'nextawards_google_font_weight',
+		'type'   => 'text'			
+	)));
+
+	/* Font Body Name */
+	$wp_customize->add_setting( 'nextawards_google_font_body' , array(
+		'default'   => 'Barlow',
+		'transport' => 'refresh',
+		'sanitize_callback' => 'nextawards_sanitize_callback_function',
+	));
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'nextawards_google_font_body_control', array(
+		'label'      => __( 'Google Font Body (ex. Roboto )', 'nextawards' ),
+		'section'    => 'nextawards_typography',
+		'settings'   => 'nextawards_google_font_body',
 		'type'   => 'text'			
 	)));
 
@@ -1347,7 +1375,8 @@ function nextawards_customize_css(){
 	$nextawards_bg_color = get_background_color();
 	echo '<style type="text/css">';
 	echo ':root { --site-bg: #'.$nextawards_bg_color.'; --link-color: '.esc_attr(get_theme_mod( 'nextawards_link_color', '#048ea0')).'; --link-color-hover: '.esc_attr(get_theme_mod( 'nextawards_link_color_hover', '#105862')).'; }';
-	echo 'body{font-family: '.esc_attr(get_theme_mod( 'nextawards_google_font', 'Barlow')).'}';
+	echo 'body{font-family: '.esc_attr(get_theme_mod( 'nextawards_google_font_body', 'Barlow')).'}';
+	echo 'h1,h2,h3,h4,h5,h6{font-family: '.esc_attr(get_theme_mod( 'nextawards_google_font', 'Barlow')).'}';
 	echo '.wp-block-button__link{background-color: '.esc_attr(get_theme_mod( 'nextawards_link_color', '#048ea0')).'}';
     echo '.wp-block-button__link:hover{background-color: '.esc_attr(get_theme_mod( 'nextawards_link_color_hover', '#105862')).'}';
 	echo '.header {background-color: '.esc_attr(get_theme_mod( 'nextawards_header_color', '#E4E4E4')).'}';
@@ -1392,20 +1421,41 @@ function nextawards_customize_css_iframe_editor() {
     if ( is_admin() ) {
 
 		/* Google Font */
-        wp_register_style( 'nextawards-admin-google-font', 'https://fonts.googleapis.com/css?family='.esc_attr(get_theme_mod( "nextawards_google_font", "Barlow")).':'.esc_attr(get_theme_mod( "nextawards_google_font_weight", "300,400,700")));
-		wp_enqueue_style( 'nextawards-admin-google-font' );
+		$nextawards_google_font_headings = esc_attr(get_theme_mod( "nextawards_google_font", "Barlow"));
+		$nextawards_google_font_body = esc_attr(get_theme_mod( "nextawards_google_font_body", "Barlow"));
+
+		if($nextawards_google_font_headings == $nextawards_google_font_body ){
+
+			wp_register_style( 'nextawards-admin-google-font', 'https://fonts.googleapis.com/css?family='.$nextawards_google_font_headings.':'.esc_attr(get_theme_mod( "nextawards_google_font_weight", "300,400,700")));
+			wp_enqueue_style( 'nextawards-admin-google-font' );
+
+		} else {
+
+			wp_register_style( 'nextawards-admin-google-font', 'https://fonts.googleapis.com/css?family='.$nextawards_google_font_headings.':'.esc_attr(get_theme_mod( "nextawards_google_font_weight", "300,400,700")));
+			wp_register_style( 'nextawards-admin-google-font-body', 'https://fonts.googleapis.com/css?family='.$nextawards_google_font_body.':400,700');
+			
+			wp_enqueue_style( 'nextawards-admin-google-font' );
+			wp_enqueue_style( 'nextawards-admin-google-font-body' );
+		}
+
 
 		/* Backend Css Custom */
 		wp_enqueue_style( 'custom-editor-style', get_template_directory_uri() . '/custom-editor-style.css');
-			$nextawards_font = esc_attr(get_theme_mod( 'nextawards_google_font', 'Barlow'));
+			
+		    $nextawards_font = esc_attr(get_theme_mod( 'nextawards_google_font', 'Barlow'));
+			$nextawards_font_body = esc_attr(get_theme_mod( 'nextawards_google_font_body', 'Barlow'));
+
 			$nextawards_link_color = esc_attr(get_theme_mod( 'nextawards_link_color', '#048ea0'));
 			$nextawards_bg_color = get_background_color();
 			$custom_css = "
 				.editor-styles-wrapper .wp-block-post-title,
 			    .editor-styles-wrapper .wp-block-heading,
 			    .editor-styles-wrapper .wp-block { 
-					font-family: {$nextawards_font};
+					font-family: {$nextawards_font_body}!important;
 				}
+
+				.editor-styles-wrapper .wp-block-heading,
+				.editor-styles-wrapper .wp-block-post-title{ font-family: {$nextawards_font}!important; }
 				.editor-styles-wrapper{background: #{$nextawards_bg_color} ;}
 				.edit-post-visual-editor .editor-styles-wrapper .wp-block-button__link,
 				body.editor-styles-wrapper .wp-block-button__link{background-color: {$nextawards_link_color } }
