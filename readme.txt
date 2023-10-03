@@ -37,12 +37,16 @@ No data is saved in the database or transferred.
 
 
 == To Do ==
-* fix related post float go up in description
-* fix input width 100% checkbox in comment form and login woo form
-* add font system with arial paragraph
 * add search header woocommerce
 
 == Changelog ==
+
+= 1.4.4 =
+* add body system font
+* hide menu on tablet version
+* fix input css
+* fix cart css
+* add dropdown menu mobile toggle on same element whe re-click
 
 = 1.4.3 =
 * fix font preview in backend

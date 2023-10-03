@@ -21,11 +21,15 @@ if (window.innerWidth < 1024) {
 	items.forEach((item) => {
 		item.addEventListener("click", function(e) {
 			e.preventDefault();
-			items.forEach((item_open) => {
-				item_open.parentNode.classList.remove('open-dropdown');
+      
+      items.forEach((item_open) => {
+        if(item.parentNode.classList.contains('open-dropdown')){ /* nothing */ } else {
+          item_open.parentNode.classList.remove('open-dropdown');
+        }
 			});
 
 			item.parentNode.classList.toggle('open-dropdown');
+
 		});	
 	});
 }
