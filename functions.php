@@ -1385,7 +1385,7 @@ function nextawards_customize_css(){
 		echo '@media (min-width: 768px) {.header__logo{position: absolute; left: 50%; transform: translate(-50%,50%);}.header__logo img{margin-top:-10px}}';
 	}
 	if(esc_attr(get_theme_mod( 'nextawards_menu_left', 'no')) == "Yes"){
-		echo '@media (min-width: 998px) { .header__content{position: relative; justify-content: flex-start;} .header__quick{position: absolute; right:0;top: 26px}}';
+		echo '@media (min-width: 998px) { .header__content{position: relative; justify-content: flex-start;} .header__quick{position: absolute; right:70px;top: 13px}}';
 	}
 	if( class_exists( 'WooCommerce' ) ){
 		echo '.woocommerce .button{background-color: '.esc_attr(get_theme_mod( 'nextawards_link_color', '#048ea0')).'!important}';

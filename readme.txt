@@ -37,7 +37,7 @@ No data is saved in the database or transferred.
 
 
 == To Do ==
-* add search header woocommerce
+* add search header woocommerce with option in customizer
 
 == Changelog ==
 

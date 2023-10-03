@@ -57,6 +57,12 @@
     
       <?php if ( has_nav_menu( 'quickmenu' ) ) { ?>
         <div class="header__quick">
+            <div class="quick-search">
+              <form role="search" method="get" action="<?php echo esc_url(home_url());  ?>">
+                <button class="quick-search__icon"> <span class="icon icon-search"></span></button>
+                <input class="quick-search__input" type="text" placeholder="<?php esc_attr_e('Search...', 'nextawards');?>" name="s">
+              </form>
+            </div>
             <?php // insert quick menu
             wp_nav_menu(array(
               'theme_location' => 'quickmenu',
