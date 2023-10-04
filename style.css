@@ -547,8 +547,8 @@ button[type=submit] { margin-top: 10px; padding: 15px 20px; color: #fff; text-tr
 .woocommerce .button{background:#222!important; color:#fff!important; text-transform: uppercase;font-family: inherit!important;}
 
 /* columns fix */
-.woocommerce-content [class*='col-'],
-.woocommerce-checkout [class*='col-'] {padding: 0;}
+.checkout.woocommerce-content [class*='col-'],
+.checkout.woocommerce-checkout [class*='col-'] {padding: 0;}
 
 /* select */
 .select2-container .select2-selection--single,
@@ -660,6 +660,10 @@ button[type=submit] { margin-top: 10px; padding: 15px 20px; color: #fff; text-tr
 .woocommerce span.onsale {background-color: #444;}
 .woocommerce div.product .product_meta {font-size: 14px;}
 
+.woocommerce .woocommerce-billing-fields{margin-bottom: 20px;}
+
+.woocommerce .woocommerce-variation-price{margin-bottom: 10px;}
+
 /* hide title and button in shop list */
 .woocommerce ul.products li.product .button {display: none;}
 .woocommerce-shop h1{display: none;}
@@ -670,6 +674,33 @@ button[type=submit] { margin-top: 10px; padding: 15px 20px; color: #fff; text-tr
 .woocommerce nav.woocommerce-pagination ul li {border: 1px solid #222;margin-right: 10px;}
 .woocommerce nav.woocommerce-pagination ul li span,
 .woocommerce nav.woocommerce-pagination ul li a { float: left; padding: 14px 19px; display: inline-block;}
+
+
+/* Checkout */
+.checkout.woocommerce-checkout .select2-container--default .select2-selection--single{border: 2px solid #ddd; height: 40px;}
+.checkout.woocommerce-checkout .select2-container--default .select2-selection--single .select2-selection__rendered{line-height: 34px;}
+
+.checkout.woocommerce-checkout input[type=text],
+.checkout.woocommerce-checkout input[type=number],
+.checkout.woocommerce-checkout input[type=tel],
+.checkout.woocommerce-checkout input[type=password],
+.checkout.woocommerce-checkout input[type=email],
+.checkout.woocommerce-checkout input[type=url],
+.checkout.woocommerce-checkout textarea{border: 2px solid #ddd}
+
+@media (min-width: 998px){
+	.checkout.woocommerce-checkout.col2-set, .woocommerce-page .col2-set{ width:50%;float:left }
+	.checkout.woocommerce-checkout #order_review_heading,
+	.checkout.woocommerce-checkout #order_review{width:45%; float:right }
+	
+	.woocommerce .col2-set .col-1, 
+	.woocommerce-page .col2-set .col-1,
+	.woocommerce .col2-set .col-2, 
+	.woocommerce-page .col2-set .col-2 {width:100%}
+	
+	.woocommerce #payment #place_order, 
+	.woocommerce-page #payment #place_order{width:100%; display:block; padding:20px}
+}
 
 
 /* End Woo Commerce
