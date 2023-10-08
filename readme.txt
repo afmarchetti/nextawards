@@ -37,6 +37,11 @@ No data is saved in the database or transferred.
 
 
 == To Do ==
+* add option system font
+* add option to 2,3,4 column footer
+* add massive test to wooroocks site with youtube videos
+
+== Doing ==
 * add search header woocommerce with option in customizer
 
 == Changelog ==
