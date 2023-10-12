@@ -1355,6 +1355,20 @@ function nextawards_customize_register( $wp_customize ) {
 		'type'   => 'text'			
 	)) );
 
+	/* Show Search */
+	$wp_customize->add_setting( 'nextawards_search' , array(
+	'default'   => 'No',
+	'transport' => 'refresh',
+		'sanitize_callback' => 'nextawards_sanitize_callback_function',
+	));
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'nextawards_search_control', array(
+		'label'      => __( 'Show Search (ex. Yes)', 'nextawards' ),
+		'section'    => 'nextawards_header',
+		'settings'   => 'nextawards_search',
+		'type'   => 'text'			
+	)) );
+
 
 
 	/* Sanitize function */
@@ -1455,7 +1469,8 @@ function nextawards_customize_css_iframe_editor() {
 				}
 
 				.editor-styles-wrapper .wp-block-heading,
-				.editor-styles-wrapper .wp-block-post-title{ font-family: {$nextawards_font}!important; }
+				.editor-styles-wrapper .wp-block-post-title,
+				.editor-styles-wrapper .gb-headline:not(p){ font-family: {$nextawards_font}!important; }
 				.editor-styles-wrapper{background: #{$nextawards_bg_color} ;}
 				.edit-post-visual-editor .editor-styles-wrapper .wp-block-button__link,
 				body.editor-styles-wrapper .wp-block-button__link{background-color: {$nextawards_link_color } }

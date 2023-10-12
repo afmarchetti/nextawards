@@ -130,7 +130,7 @@ input.quick-search__input[type=text]:focus{ outline: none;}
   .menu li{width: 100%;border-bottom: 1px solid #000}
   .menu-open .menu{height: 100vh;padding: 3%;}
 
-  .icon-hamburger{height: 50px;width: 40px;margin-left: 20px;position:absolute; top: 10px; right:15px; display: block;border:none; background: transparent;}
+  .icon-hamburger{height: 50px;width: 50px;margin-left: 20px;position:absolute; top: 10px; right:5px; display: block;border:none; background: transparent;z-index: 9999;}
   .icon-hamburger strong{height: 1px;margin-top:-1px; overflow: hidden;width: 1px;display: block;margin: 0;padding: 0;}
   .icon-hamburger span{height: 2px; width: 30px;background: var(--site-text-color);position: relative;display: block;margin-bottom: 11px;transition: all 0.2s cubic-bezier(.215, .61, .355, 1);}
   
