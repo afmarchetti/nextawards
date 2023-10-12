@@ -41,10 +41,11 @@ No data is saved in the database or transferred.
 * add option to 2,3,4 column footer
 * add massive test to wooroocks site with youtube videos
 
-== Doing ==
-* add search header woocommerce with option in customizer
-
 == Changelog ==
+
+= 1.4.5 =
+* add search header woocommerce with option in customizer
+* fix generateblocks backend font hedline preview
 
 = 1.4.4 =
 * add body system font
