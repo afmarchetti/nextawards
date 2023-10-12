@@ -1399,7 +1399,7 @@ function nextawards_customize_css(){
 		echo '@media (min-width: 768px) {.header__logo{position: absolute; left: 50%; transform: translate(-50%,50%);}.header__logo img{margin-top:-10px}}';
 	}
 	if(esc_attr(get_theme_mod( 'nextawards_menu_left', 'no')) == "Yes"){
-		echo '@media (min-width: 998px) { .header__content{position: relative; justify-content: flex-start;} .header__quick{position: absolute; right:70px;top: 13px}}';
+		echo '@media (min-width: 998px) { .header__content{position: relative; justify-content: flex-start;} .header__quick{position: absolute; right:70px;top: 27px}}';
 	}
 	if( class_exists( 'WooCommerce' ) ){
 		echo '.woocommerce .button{background-color: '.esc_attr(get_theme_mod( 'nextawards_link_color', '#048ea0')).'!important}';
@@ -1465,12 +1465,12 @@ function nextawards_customize_css_iframe_editor() {
 				.editor-styles-wrapper .wp-block-post-title,
 			    .editor-styles-wrapper .wp-block-heading,
 			    .editor-styles-wrapper .wp-block { 
-					font-family: {$nextawards_font_body}!important;
+					font-family: {$nextawards_font_body};
 				}
 
 				.editor-styles-wrapper .wp-block-heading,
 				.editor-styles-wrapper .wp-block-post-title,
-				.editor-styles-wrapper .gb-headline:not(p){ font-family: {$nextawards_font}!important; }
+				.editor-styles-wrapper .gb-headline:not(p){ font-family: {$nextawards_font}; }
 				.editor-styles-wrapper{background: #{$nextawards_bg_color} ;}
 				.edit-post-visual-editor .editor-styles-wrapper .wp-block-button__link,
 				body.editor-styles-wrapper .wp-block-button__link{background-color: {$nextawards_link_color } }

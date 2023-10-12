@@ -37,11 +37,18 @@ No data is saved in the database or transferred.
 
 
 == To Do ==
+* remove !important logic in font backend
 * add option system font
 * add option to 2,3,4 column footer
 * add massive test to wooroocks site with youtube videos
 
 == Changelog ==
+
+= 1.4.7 =
+* fix header quick csss
+
+= 1.4.6 =
+* remove !important logic in font css backend
 
 = 1.4.5 =
 * add search header woocommerce with option in customizer
