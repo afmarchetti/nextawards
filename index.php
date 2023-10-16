@@ -60,7 +60,12 @@
 
 
 					<h2 class=""><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-					<p class=""> <strong><?php the_time('j M , Y') ?> - <?php the_category(','); ?></strong></p>
+
+					<?php if ( 'post' == get_post_type() ){ ?>
+
+						<p class=""> <strong><?php the_time('j M , Y') ?> - <?php the_category(','); ?></strong></p>
+
+					<?php } ?>
 
 
 					<?php if(esc_attr(get_theme_mod( 'nextawards_article_img', 'No')) == 'Yes') { ?> 

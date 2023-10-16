@@ -191,6 +191,20 @@
         'type'   => 'text'			
     )) );
 
+     /* Topbar text */
+	$wp_customize->add_setting( 'nextawards_topbar_text' , array(
+    'default'   => '',
+    'transport' => 'refresh',
+        'sanitize_callback' => 'nextawards_sanitize_callback_function',
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'nextawards_topbar_text_control', array(
+        'label'      => __( 'Text in top bar (ex. Black friday sale 10%)', 'nextawards' ),
+        'section'    => 'nextawards_header',
+        'settings'   => 'nextawards_topbar_text',
+        'type'   => 'text'			
+    )) );
+
 
 
 	/* Sanitize function */

@@ -27,6 +27,14 @@
 
 
 	 <header class="header">
+
+  
+    <?php if(esc_attr(get_theme_mod( 'nextawards_topbar_text', '')) != '') { ?> 
+      <div class="header__topbar">
+        <?php echo esc_attr(get_theme_mod( 'nextawards_topbar_text', '')); ?>
+      </div>
+    <?php } ?>
+
     <div class="header__content">
 
         <?php 
@@ -68,7 +76,7 @@
                   <?php if(esc_attr(get_theme_mod( 'nextawards_search_products', 'No')) == 'Yes') { ?> 
 
                     <input type="hidden" name="post_type" value="product">
-                    
+
                   <?php } ?>
 
                 </form>

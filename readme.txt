@@ -37,10 +37,14 @@ No data is saved in the database or transferred.
 
 
 == To Do ==
-* remove !important logic in font backend
-* add option system font
 * add option to 2,3,4 column footer
 * add massive test to wooroocks site with youtube videos
+
+
+== Doing ==
+* top bar 
+* fix search results
+* search option only products
 
 == Changelog ==
 
