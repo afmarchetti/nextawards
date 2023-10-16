@@ -37,6 +37,8 @@ body.admin-bar .header { position: fixed; top: 32px; z-index: 1000;}
 body{font-size: 16px; background-color: var(--site-bg); color: var(--site-text-color); font-family: 'Barlow'; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%;}
 body.custom-background.dark{background-color: var(--site-bg);}
 
+body.menu-open{overflow: hidden;} /*block scrolling when menu is open*/
+
 /* ! Title System */
 h1, h2, h3, h4, h5, h6, p, ol, ul{margin-bottom: 1rem;line-height: 120%}
 
