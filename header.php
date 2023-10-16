@@ -64,6 +64,13 @@
                 <form role="search" method="get" action="<?php echo esc_url(home_url());  ?>">
                   <button class="quick-search__icon"> <span class="icon icon-search"></span></button>
                   <input class="quick-search__input" type="text" placeholder="<?php esc_attr_e('Search...', 'nextawards');?>" name="s">
+
+                  <?php if(esc_attr(get_theme_mod( 'nextawards_search_products', 'No')) == 'Yes') { ?> 
+
+                    <input type="hidden" name="post_type" value="product">
+                    
+                  <?php } ?>
+
                 </form>
               </div>
 
