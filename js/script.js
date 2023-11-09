@@ -83,5 +83,6 @@ document.querySelectorAll('.scroll a[href^="#"]').forEach(elem => {
             top: block.getBoundingClientRect().top - bodyOffset + offset,
             behavior: 'smooth'
         }); 
+        document.body.classList.remove('menu-open');
     });
 });

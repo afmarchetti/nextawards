@@ -39,17 +39,18 @@ No data is saved in the database or transferred.
 == To Do ==
 * add option to 2,3,4 column footer
 * add massive test to wooroocks site with youtube videos
-* add document.body.classList.remove('menu-open'); to script to close menu mobile, side animation instead of top?
+* add theme json for gutenberg styling and Options
 
 
-== Doing ==
+
+== Changelog ==
+
+== 1.4.8 ==
 * top bar 
 * fix search results
 * search option only products
-* add theme json for gutenberg styling and Options
 * fix menu css scrolling mobile
-
-== Changelog ==
+* add document.body.classList.remove('menu-open'); to script to close menu mobile, side animation instead of top?
 
 = 1.4.7 =
 * fix header quick csss
