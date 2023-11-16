@@ -712,6 +712,16 @@ button[type=submit] { margin-top: 10px; padding: 15px 20px; color: #fff; text-tr
 /* End Woo Commerce
 ------------------------------------------------------------------------ */
 
+
+/* Full Site Editing
+------------------------------------------------------------------------ */
+@media (max-width: 768px) {
+  .wp-block-navigation__responsive-container{padding: 20px!important;}
+}
+
+/* End Full Site Editing
+------------------------------------------------------------------------ */
+
 /* clearfix for post float images */
 .clearfix:after {
   visibility: hidden;
