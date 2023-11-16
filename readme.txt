@@ -39,11 +39,14 @@ No data is saved in the database or transferred.
 == To Do ==
 * add option to 2,3,4 column footer
 * add massive test to wooroocks site with youtube videos
-* add theme json for gutenberg styling and Options
 
 
 
 == Changelog ==
+
+== 1.5.0 ==
+* add theme json for gutenberg styling and Options
+* add FSE options to create full site editing template with the template "page no title"
 
 == 1.4.8 ==
 * top bar 
