@@ -504,6 +504,8 @@ button[type=submit] { margin-top: 10px; padding: 15px 20px; color: #fff; text-tr
 
 .icon-invert{filter: invert(1);}
 
+/* Blocks */ 
+
 /* Accordion */
 .accordion h3{position: relative;padding-right: 30px;margin-bottom: 15px;cursor:pointer}
 .accordion h3:after{
@@ -513,6 +515,11 @@ button[type=submit] { margin-top: 10px; padding: 15px 20px; color: #fff; text-tr
 }
 .accordion .wp-block-column .wp-block-group {padding: 0;max-height: 0;overflow:hidden;border-bottom: 2px solid #ddd; transition: all 0.2s ease-in-out;}
 .accordion .wp-block-column .wp-block-group.open-accordion{max-height:500px;padding-bottom: 15px;overflow: auto;}
+
+/* Media Text */
+@media (max-width: 768px) {
+  .wp-block-media-text__media img{margin-bottom: 20px;margin-top: 40px;} 
+}
 
 /* Animation on scroll */
 .fade {  opacity: 0; transform: translateY(40px); transition: 1.0s ease-in-out; will-change: transform, opacity;}
