@@ -213,10 +213,17 @@ add_action( 'customize_register', 'nextawards_customize_register' );
 function nextawards_customize_css(){
 
 	$nextawards_bg_color = get_background_color();
+	$nextawards_google_font = esc_attr(get_theme_mod( 'nextawards_google_font', 'Barlow'));
+	$nextawards_google_font = str_replace("+", " ", $nextawards_google_font);
+
+	$nextawards_google_font_body = esc_attr(get_theme_mod( 'nextawards_google_font_body', 'Barlow'));
+	$nextawards_google_font_body = str_replace("+", " ", $nextawards_google_font_body);
+
+
 	echo '<style type="text/css">';
 	echo ':root { --site-bg: #'.$nextawards_bg_color.'; --link-color: '.esc_attr(get_theme_mod( 'nextawards_link_color', '#048ea0')).'; --link-color-hover: '.esc_attr(get_theme_mod( 'nextawards_link_color_hover', '#105862')).'; }';
-	echo 'body{font-family: '.esc_attr(get_theme_mod( 'nextawards_google_font_body', 'Barlow')).'}';
-	echo 'h1,h2,h3,h4,h5,h6{font-family: '.esc_attr(get_theme_mod( 'nextawards_google_font', 'Barlow')).'}';
+	echo 'body{font-family: '.$nextawards_google_font_body.'}';
+	echo 'h1,h2,h3,h4,h5,h6{font-family: '.$nextawards_google_font.'}';
 	echo '.wp-block-button__link{background-color: '.esc_attr(get_theme_mod( 'nextawards_link_color', '#048ea0')).'}';
     echo '.wp-block-button__link:hover{background-color: '.esc_attr(get_theme_mod( 'nextawards_link_color_hover', '#105862')).'}';
 	echo '.header {background-color: '.esc_attr(get_theme_mod( 'nextawards_header_color', '#E4E4E4')).'}';
@@ -282,8 +289,11 @@ function nextawards_customize_css_iframe_editor() {
 		/* Backend Css Custom */
 		wp_enqueue_style( 'custom-editor-style', get_template_directory_uri() . '/custom-editor-style.css');
 			
-		    $nextawards_font = esc_attr(get_theme_mod( 'nextawards_google_font', 'Barlow'));
+			$nextawards_font = esc_attr(get_theme_mod( 'nextawards_google_font', 'Barlow'));
+			$nextawards_font = str_replace("+", " ", $nextawards_font);
+			
 			$nextawards_font_body = esc_attr(get_theme_mod( 'nextawards_google_font_body', 'Barlow'));
+			$nextawards_font_body = str_replace("+", " ", $nextawards_font_body);
 
 			$nextawards_link_color = esc_attr(get_theme_mod( 'nextawards_link_color', '#048ea0'));
 			$nextawards_bg_color = get_background_color();
