@@ -38,11 +38,12 @@ No data is saved in the database or transferred.
 
 == To Do ==
 * add option to 2,3,4 column footer
-* add massive test to wooroocks site with youtube videos
-
 
 
 == Changelog ==
+
+== 1.5.1 ==
+* add one page scroll functionality to home page with support for internal page, to activate simply add .home-scroll class to item in menu and a #anchor link to home page sections
 
 == 1.5.0 ==
 * add theme json for gutenberg styling and Options
