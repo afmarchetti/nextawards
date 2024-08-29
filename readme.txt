@@ -42,6 +42,9 @@ No data is saved in the database or transferred.
 
 == Changelog ==
 
+== 1.5.2 ==
+* fix update font parargraph error caused by update of wordpress
+
 == 1.5.1 ==
 * add one page scroll functionality to home page with support for internal page, to activate simply add .home-scroll class to item in menu and a #anchor link to home page sections
 
