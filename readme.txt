@@ -45,6 +45,9 @@ No data is saved in the database or transferred.
 
 == Changelog ==
 
+== 1.5.3 ==
+* fix img standard css for generateblocks and other plugins
+
 == 1.5.2 ==
 * fix update font parargraph error caused by update of wordpress
 
