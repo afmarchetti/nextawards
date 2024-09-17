@@ -37,6 +37,9 @@ No data is saved in the database or transferred.
 
 
 == To Do ==
+* add optione Disable Auto white logo in trasparent template (add in color section)
+* add option Header text color: Black / White (add in color section)
+* add option Body text color: Black / White (add in color section)
 * add option to 2,3,4 column footer
 
 

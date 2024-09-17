@@ -21,7 +21,7 @@ body, html{ font-size: 16px; font-family: -apple-system, BlinkMacSystemFont, "Se
 *,*:before,*:after{ box-sizing: border-box; }
 h1,h2,h3,h4,h5,h6, p, ol, ul{margin: 0;padding: 0;}
 ol,ul{padding-left: 20px;}
-img{height: auto;}
+img{height: auto;max-width: 100%;}
 a{text-decoration: none;}
 hr{border:none; border-bottom: 1px solid #000}
 
