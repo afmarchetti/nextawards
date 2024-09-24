@@ -53,7 +53,7 @@
 					<?php if(esc_attr(get_theme_mod( 'nextawards_article_img', 'No')) == 'No') { ?> 
 
 						<a href="<?php the_permalink(); ?>" class="">
-							<?php the_post_thumbnail('nextawards_single', array('class' => 'img-res mb-2','alt' => get_the_title())); ?>
+							<?php the_post_thumbnail('nextawards_single', array('class' => 'img-res mb-2 img-list','alt' => get_the_title())); ?>
 						</a>
 
 					<?php } ?>
@@ -71,7 +71,7 @@
 					<?php if(esc_attr(get_theme_mod( 'nextawards_article_img', 'No')) == 'Yes') { ?> 
 
 						<a href="<?php the_permalink(); ?>" class="">
-							<?php the_post_thumbnail('nextawards_single', array('class' => 'img-res mb-2','alt' => get_the_title())); ?>
+							<?php the_post_thumbnail('nextawards_single', array('class' => 'img-res mb-2 img-list','alt' => get_the_title())); ?>
 						</a>
 
 					<?php } ?>
