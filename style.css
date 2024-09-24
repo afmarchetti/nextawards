@@ -224,7 +224,7 @@ input.quick-search__input[type=text]:focus{ outline: none;}
 .menu li.open-dropdown > ul{visibility: visible; opacity: 1; display: block; }
 .menu li.mega-menu.open-dropdown > ul{visibility: visible; opacity: 1; display: block;}
 
-.menu li ul li { clear: both; width: 100%; }
+.menu li ul li { clear: both; width: 95%; }
 .menu > li.menu-item-has-children > a{position: relative;padding-right: 30px;}
 
 .menu > li.menu-item-has-children > a::after{
@@ -247,8 +247,9 @@ input.quick-search__input[type=text]:focus{ outline: none;}
   .menu li ul{position: relative;background: none;}
   .menu li ul li{border:none}
   /* .menu li ul li a{padding-left: 30px;} */
+  .menu > li.mega-menu > .sub-menu {margin-left: 5vw;}
   .menu > li.mega-menu > .sub-menu li {margin:0;}
-  .menu > li.mega-menu > .sub-menu > li {width: 45vw;margin-bottom: 20px;}
+  .menu > li.mega-menu > .sub-menu > li {width: 40vw;margin-bottom: 20px;}
 }
 
 /* ------------------------------------------------------------------------- *
