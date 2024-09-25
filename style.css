@@ -264,7 +264,7 @@ input.quick-search__input[type=text]:focus{ outline: none;}
 /* 2.3 Index */
 /* ------------------------------------------------------------------------- */
 
-.img-list{
+.img-16-9{
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }

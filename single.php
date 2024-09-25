@@ -12,7 +12,7 @@
 
 					<p class="meta-article"><strong> <?php the_time('j M , Y') ?> - <?php the_category(','); ?></strong> </p>
 
-					<?php the_post_thumbnail('nextawards_big', array('class' => 'img-res mb-2','alt' => get_the_title())); ?>
+					<?php the_post_thumbnail('nextawards_big', array('class' => 'img-res mb-2 img-16-9','alt' => get_the_title())); ?>
 
 					<div class="text-content">
 						<?php the_content(esc_html__('Read More...', 'nextawards'));?>
@@ -61,7 +61,7 @@ $custom_loop = new WP_Query(array(
 		<div class="p-2">
 			<a href="<?php the_permalink(); // link to post single page ?>">
 
-				<?php the_post_thumbnail('medium', array('class' => 'img-res pb-2', 'alt' => get_the_title())); // display featured image of the post  ?>
+				<?php the_post_thumbnail('medium', array('class' => 'img-res pb-2 img-16-9', 'alt' => get_the_title())); // display featured image of the post  ?>
 				<h3><?php the_title(); // display title of the post  ?></h3>
 
 			</a>
