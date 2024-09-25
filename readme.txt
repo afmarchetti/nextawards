@@ -45,6 +45,9 @@ No data is saved in the database or transferred.
 
 == Changelog ==
 
+== 1.5.4 ==
+* add mega menu fix image inblog section
+
 == 1.5.3 ==
 * fix img standard css for generateblocks and other plugins
 
