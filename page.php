@@ -24,8 +24,8 @@
 					<h1 class=""><?php the_title(); ?></h1>
 
 					<?php if ( has_post_thumbnail() ) { ?>
-		        <?php the_post_thumbnail('nextawards_single', array('class' => '','alt'	=> get_the_title())); ?>
-		      <?php } ?>
+						<?php the_post_thumbnail('nextawards_single', array('class' => 'img-res mb-2','alt' => get_the_title())); ?>
+		      		<?php } ?>
 
 
 					<div class="text-content">

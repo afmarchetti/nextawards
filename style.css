@@ -218,7 +218,7 @@ input.quick-search__input[type=text]:focus{ outline: none;}
   .menu > li > ul:hover { visibility: visible; opacity: 1; display: block; }
   .menu > li.mega-menu:hover > ul,
   .menu > li.mega-menu > ul:hover { visibility: visible; opacity: 1; display: flex; flex-wrap: wrap;width: 600px;}
-  .menu > li.mega-menu > ul > li{width: 190px;}
+  .menu > li.mega-menu > ul > li{width: 193px;}
 
 } 
 
