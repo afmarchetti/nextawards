@@ -197,17 +197,18 @@ input.quick-search__input[type=text]:focus{ outline: none;}
   transition: all 0.5s ease; 
   margin-top: 0px;
   left: 0; 
-  padding: 0;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .menu li ul > li > a,
-.page-template-menu-trasparent .menu li ul > li > a{color:#000}
+.page-template-menu-trasparent .menu li ul > li > a{color:#000; border-radius: 7px;}
 .menu li ul > li > a:hover {background: #ccc;color:#000}
 
 /* Mega Menu */
 .menu > li.mega-menu > .sub-menu a{padding: 12px;}
-.menu > li.mega-menu > .sub-menu .sub-menu  {padding-left: 0;width: 200px;}
-.menu > li.mega-menu > .sub-menu .sub-menu  li a{padding-top: 6px;padding-bottom: 10px;font-weight: normal;font-size: 14px;}
+.menu > li.mega-menu > .sub-menu .sub-menu  {padding-left: 0;width: 180px;}
+.menu > li.mega-menu > .sub-menu .sub-menu  li a{padding-top: 7px;padding-bottom: 8px;font-weight: normal;font-size: 14px;}
 
 
 /* Open Menus */
@@ -217,14 +218,14 @@ input.quick-search__input[type=text]:focus{ outline: none;}
   .menu > li > ul:hover { visibility: visible; opacity: 1; display: block; }
   .menu > li.mega-menu:hover > ul,
   .menu > li.mega-menu > ul:hover { visibility: visible; opacity: 1; display: flex; flex-wrap: wrap;width: 600px;}
-  .menu > li.mega-menu > ul > li{width: 200px;}
+  .menu > li.mega-menu > ul > li{width: 190px;}
 
 } 
 
 .menu li.open-dropdown > ul{visibility: visible; opacity: 1; display: block; }
 .menu li.mega-menu.open-dropdown > ul{visibility: visible; opacity: 1; display: block;}
 
-.menu li ul li { clear: both; width: 95%; }
+.menu li ul li { clear: both; width: 100%; }
 .menu > li.menu-item-has-children > a{position: relative;padding-right: 30px;}
 
 .menu > li.menu-item-has-children > a::after{
@@ -245,7 +246,7 @@ input.quick-search__input[type=text]:focus{ outline: none;}
 @media (max-width: 1190px) {
 
   .menu li ul{position: relative;background: none;}
-  .menu li ul li{border:none}
+  .menu li ul li{border:none; width: 95%; }
   /* .menu li ul li a{padding-left: 30px;} */
   .menu > li.mega-menu > .sub-menu {margin-left: 5vw;}
   .menu > li.mega-menu > .sub-menu li {margin:0;}
