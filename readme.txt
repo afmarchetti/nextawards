@@ -46,6 +46,9 @@ No data is saved in the database or transferred.
 == Changelog ==
 
 == 1.5.4 ==
+* fixed style mega menu and image 16-9 in single, list and related post
+
+== 1.5.4 ==
 * add mega menu fix image inblog section
 
 == 1.5.3 ==
