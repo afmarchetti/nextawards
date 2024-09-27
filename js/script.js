@@ -87,13 +87,13 @@ document.querySelectorAll('.scroll a[href^="#"]').forEach(elem => {
     });
 });
 
-
 // js one page scroll home
-let root_url = window.location.origin;
-document.querySelectorAll('.home .home-scroll a[href^="'+root_url+'/#"]').forEach(elem => {
+let root_url = document.location.href.match(/(^[^#]*)/)
+
+document.querySelectorAll('.home-scroll a[href^="'+root_url[0]+'#"]').forEach(elem => {
   elem.addEventListener('click', e => {
       e.preventDefault();
-      elem_id = elem.getAttribute('href').replace(root_url+"/", "");
+      elem_id = elem.getAttribute('href').replace(root_url[0], "");
       let block = document.querySelector(elem_id),
           offset = elem.dataset.offset ? parseInt(elem.dataset.offset) : 0,
           bodyOffset = document.body.getBoundingClientRect().top;
