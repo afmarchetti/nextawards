@@ -45,7 +45,13 @@ No data is saved in the database or transferred.
 
 == Changelog ==
 
-== 1.5.4 ==
+
+* add button outline hover style
+
+== 1.5.6 ==
+* add template cotained no title and fix menu scroll in internal pages
+
+== 1.5.5 ==
 * fixed style mega menu and image 16-9 in single, list and related post
 
 == 1.5.4 ==

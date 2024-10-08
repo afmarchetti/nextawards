@@ -90,6 +90,18 @@
         },
         "blocks": {
             "core/button": {
+                "variations": {
+					"outline": {
+						"spacing": {
+							"padding": {
+								"top": "12px",
+                                "right": "32px",
+                                "bottom": "12px",
+                                "left": "32px"
+							}
+						}
+					}
+				},
                 "spacing": {
                     "padding": {
                         "top": "14px",
