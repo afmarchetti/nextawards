@@ -46,7 +46,14 @@ No data is saved in the database or transferred.
 == Changelog ==
 
 
+TODO: 
+- Add typography system, font, spacing from ollytheme json
+- add white logo in customizer, fallback current logo system
+- check block variation quote and create one for buttons
+
+DONE TO UPLOAD:
 * add button outline hover style
+* improve woocommerce button style, table and tabs
 
 == 1.5.6 ==
 * add template cotained no title and fix menu scroll in internal pages

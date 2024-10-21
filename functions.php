@@ -238,6 +238,8 @@ function nextawards_customize_css(){
 	if( class_exists( 'WooCommerce' ) ){
 		echo '.woocommerce .button{background-color: '.esc_attr(get_theme_mod( 'nextawards_link_color', '#048ea0')).'!important}';
 		echo '.woocommerce .button:hover{background-color: '.esc_attr(get_theme_mod( 'nextawards_link_color_hover', '#105862')).'!important}';
+		echo '.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit {background-color: '.esc_attr(get_theme_mod( 'nextawards_link_color', '#048ea0')).'!important; color:#fff}';
+		echo '.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit:hover {background-color: '.esc_attr(get_theme_mod( 'nextawards_link_color_hover', '#105862')).'!important;color:#fff}';
 	}
 
 	echo '.has-light-gray-background-color {background-color: #f5f5f5 }';
