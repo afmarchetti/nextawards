@@ -1,7 +1,7 @@
 /*
 Theme Name: 	Nextawards
 Description: 	Responsive Starter WordPress Theme (WooCommerce Ready) with: Minimal Style, 4 Header Style, 2 Menus, 11 Amazing Block Patterns, Trasparent Header Template, WhatsApp Chat, Cool animations, Light and fast, Full Site Editing Template! Inspired by Awards Winning Web Sites. Correct setup and installation in theme folder readme file ;)
-Version:     	1.5.6
+Version:     	1.5.7
 Author:     	Andrea Marchetti
 Site:         http://www.marchettidesign.net
 Text Domain: 	nextawards
@@ -40,8 +40,18 @@ body.custom-background.dark{background-color: var(--site-bg);}
 body.menu-open{overflow: hidden;} /*block scrolling when menu is open*/
 
 /* ! Title System */
-h1, h2, h3, h4, h5, h6, p, ol, ul{margin-bottom: 1rem;line-height: 120%}
+h1, h2, h3, h4, h5, h6, p, ol, ul{margin-bottom: 1rem;line-height: 130%}
 
+h1, h2{line-height: 110%;}
+
+p, ul,li {font-size: 1.05rem;}
+
+@media (max-width: 768px) {
+  p, ul,li {font-size: 0.95rem;}
+}
+
+/* Typography Style Added in theme.json */
+/*
 .text-0{font-size: 5rem; line-height: 100%;}
 h1, .text-1{font-size: 3.4rem;}
 h2, .text-2{font-size: 2.2rem;}
@@ -50,12 +60,14 @@ h4, .text-4{font-size: 1.3rem;}
 h5, p, .text-5, ul,li{font-size: 1rem;line-height: 150%}
 h6{font-size: 0.8rem;}
 
-.evi a{color:#fff!important; background-color: var(--link-color);border-radius: 100px;padding-left: 20px!important; padding-right: 20px!important;}
-
 @media (max-width: 768px) {
   .text-0{font-size: 4rem}
-  h1, .text-1{font-size: 3rem;}
-}
+  h1, .text-1{font-size: 2.4rem;}
+} */
+
+.evi a{color:#fff!important; background-color: var(--link-color);border-radius: 100px;padding-left: 20px!important; padding-right: 20px!important;}
+
+
 
 /* Link color */
 a { color: var(--link-color); }
@@ -695,6 +707,12 @@ button[type=submit] { margin-top: 10px; padding: 15px 20px; color: #fff; text-tr
 .woocommerce div.product .woocommerce-tabs ul.tabs { padding: 0; }
 
 .woocommerce table.shop_attributes tr:nth-child(even) td, .woocommerce table.shop_attributes tr:nth-child(even) th { background: none; }
+
+/* review */
+.woocommerce #review_form #respond p{margin:10px 10px 10px 0px}
+.woocommerce #review_form #respond p.comment-form-cookies-consent,
+.woocommerce #review_form #respond p.form-submit{width: 100%;float:left;}
+
 
 /* messages */
 .woocommerce-error, .woocommerce-info, .woocommerce-message {
