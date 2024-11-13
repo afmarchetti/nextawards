@@ -107,4 +107,20 @@ document.querySelectorAll('.home-scroll a[href^="'+root_url[0]+'#"]').forEach(el
 
 
 
+// parallax cover
+//  https://github.com/piersrueb/simpleparallax
 
+const simpleParallax = (elem, modifier) => {
+  let paras = [...document.querySelectorAll(elem)];
+  const sp = () => {
+    for (let i = 0; i < paras.length; i++) {
+      let x = paras[i].getBoundingClientRect().top / modifier;
+      let y = Math.round(x * 100) / 100;
+      paras[i].style.objectPosition = "0% " + y + "%";
+    }
+    requestAnimationFrame(sp);
+  };
+  requestAnimationFrame(sp);
+};
+
+simpleParallax(".para .wp-block-cover__image-background", 20);
