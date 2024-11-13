@@ -16,7 +16,7 @@ Template Name: Contained No Title
 
 <?php if (have_posts()) :?><?php while(have_posts()) : the_post(); ?>
 
-	<div class="col-70">
+	<div class="col-70 tab-90">
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 

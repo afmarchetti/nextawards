@@ -86,7 +86,7 @@
     },
     "styles": {
 		"typography": {
-			"fontSize": "var(--wp--preset--font-size--extra-small)",
+			"fontSize": "var(--wp--preset--font-size--small)",
 			"fontFamily": "var(--wp--preset--font-family--system-fonts)",
 			"lineHeight": "1.2"
 		},

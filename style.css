@@ -8,7 +8,7 @@ Text Domain: 	nextawards
 Tested up to: 6.1
 Requires PHP: 5.6
 Domain Path: 	/languages
-Tags:        	blog, custom-colors, custom-logo, custom-menu, e-commerce, theme-options, translation-ready, block-editor-patterns, block-editor-styles, custom-background, featured-images, footer-widgets, photography, portfolio, wide-blocks, full-site-editing
+Tags:        	blog, custom-colors, custom-logo, custom-menu, e-commerce, theme-options, translation-ready, block-editor-patterns, block-editor-styles, custom-background, featured-images, footer-widgets, photography, portfolio, wide-blocks
 License:    	GNU General Public License v3.0
 License URI:	http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -138,7 +138,7 @@ input.quick-search__input[type=text]:focus{ outline: none;}
 
   .menu{   
     position: absolute; top:60px; left:0; right:0; background-color: var(--site-bg); min-width: 100%; 
-     height: 100vh; margin: 0 -20px 0 -20px; 
+    height: 100vh; margin: 0 -5% 0 -5%; 
     overflow: auto;transition: all 1s cubic-bezier(.215, .61, .355, 1);padding-left: 0; transform: translateX(-100%);
   }
 
@@ -332,19 +332,20 @@ input.quick-search__input[type=text]:focus{ outline: none;}
 }
 
 
-
-body .alignfull {
+/* body .alignfull {
   margin-left: -20px;
   margin-right: -20px;
+} */
+
+body .alignfull {
+  width: auto;
+  max-width: 1000%;
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
 }
 
-@media only screen and (min-width: 960px) {
-  body .alignfull {
-    width: auto;
-    max-width: 1000%;
-    margin-right: calc(50% - 50vw);
-    margin-left: calc(50% - 50vw);
-  }
+@media only screen and (min-width: 789px) {
+
   body .alignwide {
     width: auto;
     max-width: 1000%;
@@ -472,6 +473,8 @@ button[type=submit] { margin-top: 10px; padding: 15px 20px; color: #fff; text-tr
   .tab-25 { width: 25%; }
   .tab-33 { width: 33.33%; }
   .tab-50 { width: 50%; }
+  .tab-80 { width: 80%; }
+  .tab-90 { width: 90%; }
   .tab-100 { width: 100%; }
 }
 
@@ -573,7 +576,7 @@ button[type=submit] { margin-top: 10px; padding: 15px 20px; color: #fff; text-tr
 }
 
 /* Animation on scroll */
-.fade {  opacity: 0; transform: translateY(40px); transition: 1.0s ease-in-out; will-change: transform, opacity;}
+.fade {  opacity: 0; transform: translateY(40px); transition: 0.6s ease-in-out; will-change: transform, opacity;}
 .fadeIn { opacity: 1;transform: translateY(0px)}
 
 /* Animation on load */

@@ -2,7 +2,7 @@
 
 	<main  id="content" class="grid grid--center" role="main">
 
-	<div class="col-70">
+	<div class="col-70 tab-90">
 
 		<?php if (have_posts()) :?><?php while(have_posts()) : the_post(); ?>
 
