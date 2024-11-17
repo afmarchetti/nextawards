@@ -87,7 +87,7 @@ document.querySelectorAll('.scroll a[href^="#"]').forEach(elem => {
     });
 });
 
-// js one page scroll home (for back compatibility)
+// js one page scroll home (for Backwards compatibility)
 let root_url = document.location.href.match(/(^[^#]*)/)
 
 document.querySelectorAll('.home-scroll a[href^="'+root_url[0]+'#"]').forEach(elem => {
@@ -105,7 +105,7 @@ document.querySelectorAll('.home-scroll a[href^="'+root_url[0]+'#"]').forEach(el
   });
 });
 
-// js one page scroll internal page
+// js one page scroll internal page (new class better semantic)
 let root_url_2 = document.location.href.match(/(^[^#]*)/)
 
 document.querySelectorAll('.page-scroll a[href^="'+root_url_2[0]+'#"]').forEach(elem => {
@@ -124,8 +124,6 @@ document.querySelectorAll('.page-scroll a[href^="'+root_url_2[0]+'#"]').forEach(
 });
 
 
-
-
 // parallax cover
 // https://github.com/piersrueb/simpleparallax
 
@@ -142,4 +140,4 @@ const simpleParallax = (elem, modifier) => {
   requestAnimationFrame(sp);
 };
 
-simpleParallax(".para .wp-block-cover__image-background", 20);
+simpleParallax(".parallax-cover .wp-block-cover__image-background", 20);

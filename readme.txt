@@ -53,13 +53,16 @@ No data is saved in the database or transferred.
 TODO: 
 - add white logo in customizer, fallback current logo system
 - check block variation quote and create one for buttons
-- test spacing fuild system like oll theme
+- test spacing fuild system like oll. theme
 
-TO PUBLISH 
+== 1.5.8 ==
 * fix layout ont tablet and mobile
 * fix css text
 * fix name one page scroll class menu
 * add parallax scroll to cover with .para class
+* add icon email and Navigate
+* fix wrapper parallax bug
+* change search icon
 
 
 == 1.5.7 ==
