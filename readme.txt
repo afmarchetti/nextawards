@@ -63,6 +63,7 @@ TODO:
 * add icon email and Navigate
 * fix wrapper parallax bug
 * change search icon
+* fix size pages
 
 
 == 1.5.7 ==
