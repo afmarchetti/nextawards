@@ -55,6 +55,12 @@ TODO:
 - check block variation quote and create one for buttons
 - test spacing fuild system like oll. theme
 
+== 1.6.0 ==
+* fix css wrapper
+
+== 1.5.9 ==
+* fix wrapper css
+
 == 1.5.8 ==
 * fix layout ont tablet and mobile
 * fix css text

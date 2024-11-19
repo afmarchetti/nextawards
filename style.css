@@ -1,7 +1,7 @@
 /*
 Theme Name: 	Nextawards
 Description: 	Responsive Starter WordPress Theme (WooCommerce Ready) with: Minimal Style, 4 Header Style, 2 Menus, 11 Amazing Block Patterns, Trasparent Header Template, WhatsApp Chat, Cool animations, Light and fast, Full Site Editing Template! Inspired by Awards Winning Web Sites. Correct setup and installation in theme folder readme file ;)
-Version:     	1.5.8
+Version:     	1.6.0
 Author:     	Andrea Marchetti
 Site:         http://www.marchettidesign.net
 Text Domain: 	nextawards
@@ -82,7 +82,7 @@ a:focus, a:hover { color: var(--link-color-hover); text-decoration: none; }
 /* 2 Layout */
 /* ------------------------------------------------------------------------- */
 
-.wrapper{width: 100%;padding: 0 3%;overflow: hidden;}
+.wrapper{width: 100%;padding: 0 3%;overflow: hidden; position: relative;}
 	
 /* ------------------------------------------------------------------------- *
 /* 2.1 Menu */
@@ -103,7 +103,8 @@ a:focus, a:hover { color: var(--link-color-hover); text-decoration: none; }
 .header__quick{display: flex; align-items: center;color:var(--site-text-color);font-weight: bold;}
 .header__quick a{color:var(--site-text-color);}
 
-.header__logo-img{width: 180px;height: auto;}
+.header__logo-img,
+.header__logo_white-img{width: 180px;height: auto;}
 .header__quick ul{list-style-type: none;margin-bottom: 0;}
 .header__quick ul li{display: inline-block;}
 .header__quick ul li a{padding: 10px 5px;}
@@ -115,6 +116,15 @@ a:focus, a:hover { color: var(--link-color-hover); text-decoration: none; }
 
 .icon-hamburger{display: none;}
 
+/* hide classes (used on the logos) */
+@media (min-width: 1190px) {
+  .hide-desktop{display: none;}
+}
+@media (max-width: 1190px) {
+  .hide-mobile{display: none;}
+}
+
+.hide-all{display: none;}
 
 /* Quick search */
 
@@ -134,7 +144,8 @@ input.quick-search__input[type=text]:focus{ outline: none;}
 
 @media (max-width: 1190px) {
 
-  .header__logo-img{width: 140px;height: auto;}
+  .header__logo-img,
+  .header__logo_white-img{width: 140px;height: auto;}
 
   .menu{   
     position: absolute; top:60px; left:0; right:0; background-color: var(--site-bg); min-width: 100%; 
@@ -587,7 +598,6 @@ button[type=submit] { margin-top: 10px; padding: 15px 20px; color: #fff; text-tr
   to {opacity: 1; top:0;}
 }
 .load { 
-  position: relative;
   opacity: 0; 
   animation: fade-load cubic-bezier(0.385, 0.135, 0.15, 0.86) 0.5s forwards; 
 }
