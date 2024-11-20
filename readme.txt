@@ -51,9 +51,11 @@ No data is saved in the database or transferred.
 
 
 TODO: 
-- add white logo in customizer, fallback current logo system
 - check block variation quote and create one for buttons
 - test spacing fuild system like oll. theme
+
+== 1.6.1 ==
+* add white logo in customizer, fallback current logo system
 
 == 1.6.0 ==
 * fix css wrapper
