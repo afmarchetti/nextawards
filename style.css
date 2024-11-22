@@ -627,7 +627,10 @@ button[type=submit] { margin-top: 10px; padding: 15px 20px; color: #fff; text-tr
 .menu-cart-total span{position: absolute;bottom:10px; right:-2pxpx;font-size: 11px;}
 
 /* button */
-.woocommerce .button{background:#222!important; color:#fff!important; text-transform: uppercase;font-family: inherit!important;}
+.woocommerce .button{
+  background:#222!important; color:#fff!important; text-transform: uppercase;font-family: inherit!important;
+  margin-top:0; margin-right:10px;
+}
 
 .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit,
 .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button,
