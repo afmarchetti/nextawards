@@ -54,6 +54,9 @@ TODO:
 - check block variation quote and create one for buttons
 - test spacing fuild system like oll. theme
 
+== 1.6.2 ==
+* fix css cart and button new version woocommerce
+
 == 1.6.1 ==
 * add white logo in customizer, fallback current logo system
 
