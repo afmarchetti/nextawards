@@ -661,7 +661,7 @@ button[type=submit] { margin-top: 10px; padding: 15px 20px; color: #fff; text-tr
 .woocommerce-cart .variation dd{height: 20px;}
 
 .woocommerce #coupon_code,
-.woocommerce .actions .button{height: 36px; border-radius: 3px;padding: 5px 15px; line-height: 25px;}
+.woocommerce .actions .button{height: 36px; border-radius: 3px;padding: 5px 15px; line-height: 17px!important;}
 .woocommerce #coupon_code{width: 120px!important}
 
 @media (max-width: 768px) {
