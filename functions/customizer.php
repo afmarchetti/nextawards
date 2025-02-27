@@ -87,6 +87,33 @@
 		'settings'   => 'nextawards_header_color',
 	)));
 
+	/* Footer Color */
+	$wp_customize->add_setting( 'nextawards_footer_color' , array(
+		'default'   => '#E4E4E4',
+		'transport' => 'refresh',
+			'sanitize_callback' => 'sanitize_hex_color',
+		));
+	
+		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nextawards_footer_color_control', array(
+			'label'      => __( 'Footer Color', 'nextawards' ),
+			'section'    => 'colors',
+			'settings'   => 'nextawards_footer_color',
+		)));
+
+	/* Footer Text Color */
+	$wp_customize->add_setting( 'nextawards_footer_text_color' , array(
+		'default'   => '#000',
+		'transport' => 'refresh',
+			'sanitize_callback' => 'sanitize_hex_color',
+		));
+	
+		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nextawards_footer_text_color_control', array(
+			'label'      => __( 'Footer Text Color', 'nextawards' ),
+			'section'    => 'colors',
+			'settings'   => 'nextawards_footer_text_color',
+		)));
+	
+
 	/* Border Color */
 	$wp_customize->add_setting( 'nextawards_border_color' , array(
     'default'   => '#222222',

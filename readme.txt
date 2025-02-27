@@ -49,10 +49,13 @@ No data is saved in the database or transferred.
 
 == Changelog ==
 
-
 TODO: 
 - check block variation quote and create one for buttons
 - test spacing fuild system like oll. theme
+
+== 1.6.3 ==
+* fix cart button coupon woocommerce
+* add footer colors
 
 == 1.6.2 ==
 * fix css cart and button new version woocommerce

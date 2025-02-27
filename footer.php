@@ -10,7 +10,7 @@
 ?>
 
 
-<footer class="pt-3 pb-3">
+<footer class="pt-3 pb-3 footer-container">
 
 	<div class="col-100">
 		<hr class="mb-3">

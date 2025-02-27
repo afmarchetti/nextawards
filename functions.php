@@ -257,6 +257,10 @@ function nextawards_customize_css(){
 	echo '.has-link-color-hover-background-color {background-color: '.esc_attr(get_theme_mod( 'nextawards_link_color_hover', '#048ea0')).';}';
 	echo '.has-link-color-hover-color {color: '.esc_attr(get_theme_mod( 'nextawards_link_color_hover', '#048ea0')).';}';
 
+	//footer color
+	echo '.footer-container {background-color: '.esc_attr(get_theme_mod( 'nextawards_footer_color', '#E4E4E4')).'; color: '.esc_attr(get_theme_mod( 'nextawards_footer_text_color', '#000')).'}';
+	echo '.footer-container hr {border-color: '.esc_attr(get_theme_mod( 'nextawards_border_color', '#222222')).'}';
+
 	echo '</style>';
 
 }
