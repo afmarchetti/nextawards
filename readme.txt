@@ -53,6 +53,10 @@ TODO:
 - check block variation quote and create one for buttons
 - test spacing fuild system like oll. theme
 
+== 1.6.4 ==
+* fix functions php line break end of the file
+* fix quick menu mobile hide css
+
 == 1.6.3 ==
 * fix cart button coupon woocommerce
 * add footer colors
