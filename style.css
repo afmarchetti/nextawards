@@ -169,7 +169,7 @@ input.quick-search__input[type=text]:focus{ outline: none;}
 
 }
 
-@media (max-width: 500px) {
+@media (max-width: 400px) {
   .header__quick .menu-item-type-custom{display: none;}
   .header__quick button{pointer-events: none;}
 }
