@@ -53,6 +53,9 @@ TODO:
 - check block variation quote and create one for buttons
 - test spacing fuild system like oll. theme
 
+== 1.6.5 ==
+* fix font-weight bold on strong 
+
 == 1.6.4 ==
 * fix functions php line break end of the file
 * fix quick menu mobile hide css
