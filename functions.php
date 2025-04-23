@@ -224,7 +224,7 @@ function nextawards_customize_css(){
 	echo ':root { --site-bg: #'.$nextawards_bg_color.'; --link-color: '.esc_attr(get_theme_mod( 'nextawards_link_color', '#048ea0')).'; --link-color-hover: '.esc_attr(get_theme_mod( 'nextawards_link_color_hover', '#105862')).'; }';
 	echo 'body, :root :where(body), p, ul, li, ol{font-family: '.$nextawards_google_font_body.'}';
 	echo 'h1,h2,h3,h4,h5,h6{font-family: '.$nextawards_google_font.'}';
-	echo '.wp-block-button__link{background-color: '.esc_attr(get_theme_mod( 'nextawards_link_color', '#048ea0')).'}';
+	echo '.wp-block-button__link, input[type=submit].wpcf7-submit{background-color: '.esc_attr(get_theme_mod( 'nextawards_link_color', '#048ea0')).'}';
     echo '.wp-block-button__link:hover:not(.is-style-outline .wp-block-button__link){background-color: '.esc_attr(get_theme_mod( 'nextawards_link_color_hover', '#105862')).'}';
 	echo '.is-style-outline .wp-block-button__link:hover{color: '. esc_attr(get_theme_mod( 'nextawards_link_color_hover', '#105862')).'}';
 	echo '.header {background-color: '.esc_attr(get_theme_mod( 'nextawards_header_color', '#E4E4E4')).'}';

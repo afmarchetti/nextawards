@@ -53,6 +53,13 @@ TODO:
 - check block variation quote and create one for buttons
 - test spacing fuild system like oll. theme
 
+== 1.6.6 ==
+* add css for accessibility
+* add roles for accessibiliyt
+* fix search forms form for accessibility
+* fix alt logos for accesibility
+* Add cf7 button submit style
+
 == 1.6.5 ==
 * fix font-weight bold on strong 
 

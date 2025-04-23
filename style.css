@@ -1,7 +1,7 @@
 /*
 Theme Name: 	Nextawards
 Description: 	Responsive Starter WordPress Theme (WooCommerce Ready) with: Minimal Style, 4 Header Style, 2 Menus, 11 Amazing Block Patterns, Trasparent Header Template, WhatsApp Chat, Cool animations, Light and fast, Full Site Editing Template! Inspired by Awards Winning Web Sites. Correct setup and installation in theme folder readme file ;)
-Version:     	1.6.5
+Version:     	1.6.6
 Author:     	Andrea Marchetti
 Site:         http://www.marchettidesign.net
 Text Domain: 	nextawards
@@ -430,7 +430,7 @@ input[type=email],
 input[type=url]{ width: 100%; padding: 10px; border: 1px solid #949494; background: #fff; -webkit-appearance: none;border-radius: 0;margin-top:5px}
 textarea { padding: 10px; width: 100%; border: 1px solid #949494; background: #fff; -webkit-appearance: none;border-radius: 0;margin-top:5px}
 input[type=submit],
-button[type=submit] { margin-top: 10px; padding: 15px 20px; color: #fff; text-transform: uppercase; background: #222; border:none;margin-top:5px;display: block;font-weight: bold;width: auto;}
+button[type=submit] { margin-top: 10px; padding: 15px 20px; color: #fff; text-transform: uppercase; background: #222; border:none;margin-top:5px;display: block;font-weight: bold;width: auto;font-size: 16px;border-radius:5px; font-family: inherit;}
 #comments { width: 100%; }
 
 
@@ -558,10 +558,10 @@ button[type=submit] { margin-top: 10px; padding: 15px 20px; color: #fff; text-tr
 .comment-content a{text-decoration: underline;}
 
 /* focus elements */
-:focus {
+/* :focus {
   outline: 2px solid #2ba801;
   outline-offset: 2px;
-}
+} */
 
 /* hide elements for accessibility */
 .visually-hidden {
