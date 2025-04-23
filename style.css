@@ -245,14 +245,19 @@ input.quick-search__input[type=search]{padding: 10px 3px;font-size: 13px;margin:
 
   .menu > li:hover > ul,
   .menu > li > ul:hover { visibility: visible; opacity: 1; display: block; }
+  
   .menu > li.mega-menu:hover > ul,
-  .menu > li.mega-menu > ul:hover { visibility: visible; opacity: 1; display: flex; flex-wrap: wrap;width: 600px;}
+  .menu > li.mega-menu > ul:hover,
+  .menu > li.mega-menu:focus-within > ul { visibility: visible; opacity: 1; display: flex; flex-wrap: wrap;width: 600px;}
   .menu > li.mega-menu > ul > li{width: 193px;}
 
 } 
 
 .menu li.open-dropdown > ul{visibility: visible; opacity: 1; display: block; }
 .menu li.mega-menu.open-dropdown > ul{visibility: visible; opacity: 1; display: block;}
+
+/* open dropdown with focus tab*/
+.menu li:focus-within ul{visibility: visible; opacity: 1; display: block; }
 
 .menu li ul li { clear: both; width: 100%; }
 .menu > li.menu-item-has-children > a{position: relative;padding-right: 30px;}
