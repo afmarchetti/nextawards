@@ -10,7 +10,7 @@
 ?>
 
 
-<footer class="pt-3 pb-3 footer-container">
+<footer class="pt-3 pb-3 footer-container" role="contentinfo">
 
 	<div class="col-100">
 		<hr class="mb-3">
@@ -42,7 +42,7 @@
 <?php if(esc_attr(get_theme_mod( 'nextawards_whatsapp', '')) != '') { ?> 
 
 	<a href="https://api.whatsapp.com/send?phone=<?php echo esc_attr(get_theme_mod( 'nextawards_whatsapp', '')); ?>" target="_blank" class="logo-whats-app">
-		<div class="icon-wa"></div>
+		<div class="icon-wa"><?php esc_attr_e('Contact me via WhatsApp', 'nextawards');?></div>
 	</a>
 
 <?php } ?>

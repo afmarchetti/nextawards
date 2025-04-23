@@ -26,7 +26,7 @@
    <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'nextawards' ); ?></a>
 
 
-	 <header class="header">
+	 <header class="header" role="banner">
 
   
     <?php if(esc_attr(get_theme_mod( 'nextawards_topbar_text', '')) != '') { ?> 
@@ -52,11 +52,11 @@
           
             <?php if ( $nextawards_logo_white && is_page_template( 'page-templates/menu-trasparent.php'  )) { ?>
 
-                 <img class="header__logo_white-img hide-mobile" src="<?php echo esc_url( $nextawards_logo_white ); ?>" alt="<?php echo esc_url( get_bloginfo( 'name' )); ?>">
-                 <img class="header__logo-img hide-desktop" src="<?php echo esc_url( $nextawards_logo[0] ); ?>" alt="<?php echo esc_url( get_bloginfo( 'name' )); ?>">
+                 <img class="header__logo_white-img hide-mobile" src="<?php echo esc_url( $nextawards_logo_white ); ?>" alt="<?php echo get_bloginfo( 'name' ); ?>">
+                 <img class="header__logo-img hide-desktop" src="<?php echo esc_url( $nextawards_logo[0] ); ?>" alt="<?php echo get_bloginfo( 'name' ); ?>">
             <?php } else { ?> 
 
-              <img class="header__logo-img" src="<?php echo esc_url( $nextawards_logo[0] ); ?>" alt="<?php echo esc_url( get_bloginfo( 'name' )); ?>">
+              <img class="header__logo-img" src="<?php echo esc_url( $nextawards_logo[0] ); ?>" alt="<?php echo get_bloginfo( 'name' ); ?>">
            
             <?php } ?>
 
@@ -68,19 +68,23 @@
         <?php } ?>
 
 
-      <button class="icon-hamburger">
+      <button class="icon-hamburger" aria-expanded="false" aria-controls="main-menu" aria-label="open main menu">
             <strong><?php _e( 'Menu', 'nextawards' ); ?></strong>
             <span></span>
             <span></span>
       </button>
 
-			<?php // insert custom menu header
-        wp_nav_menu(array(
-          'theme_location' => 'header',
-          'container' => false,
-          'items_wrap' => '<ul class="menu">%3$s</ul>'
-        ));
-      ?>
+      <nav role="navigation" aria-label="main menu">
+
+        <?php // insert custom menu header
+          wp_nav_menu(array(
+            'theme_location' => 'header',
+            'container' => false,
+            'items_wrap' => '<ul class="menu">%3$s</ul>'
+          ));
+        ?>
+
+      </nav>
     
       <?php if ( has_nav_menu( 'quickmenu' ) ) { ?>
         <div class="header__quick">
@@ -89,8 +93,10 @@
 
               <div class="quick-search">
                 <form method="get" action="<?php echo esc_url(home_url());  ?>">
-                  <button class="quick-search__icon"> <span class="icon icon-search"></span></button>
-                  <input class="quick-search__input" type="text" placeholder="<?php esc_attr_e('Search...', 'nextawards');?>" name="s">
+                  <button class="quick-search__icon"><span class="icon icon-search"> Search </span></button>
+
+                  <label for="quick-search" class="visually-hidden"><?php esc_attr_e('Search...', 'nextawards');?></label>
+                  <input id="quick-search"class="quick-search__input" type="search" placeholder="<?php esc_attr_e('Search...', 'nextawards');?>" name="s"  aria-label="<?php esc_attr_e('Search...', 'nextawards');?>">
 
                   <?php if(esc_attr(get_theme_mod( 'nextawards_search_products', 'No')) == 'Yes') { ?> 
 
@@ -102,6 +108,7 @@
               </div>
 
             <?php } ?>
+            
 
             <?php // insert quick menu
             wp_nav_menu(array(
