@@ -8,7 +8,7 @@
  */
  ?>
 <form method="get" action="<?php echo esc_url(home_url());  ?>" class="form-search">
-    <label for="search-field" class="visually-hidden"><?php esc_attr_e('Try to make a search...', 'nextawards');?></label>
+    <label for="search-field" class="visually-hidden"><?php esc_html_e('Try to make a search...', 'nextawards');?></label>
    
     <input id="search-field" type="search" placeholder="<?php esc_attr_e('Try to make a search...', 'nextawards');?>" name="s" aria-label="<?php esc_attr_e('Try to make a search...', 'nextawards');?>">
    

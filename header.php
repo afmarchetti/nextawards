@@ -95,7 +95,7 @@
                 <form method="get" action="<?php echo esc_url(home_url());  ?>">
                   <button class="quick-search__icon"><span class="icon icon-search"> Search </span></button>
 
-                  <label for="quick-search" class="visually-hidden"><?php esc_attr_e('Search...', 'nextawards');?></label>
+                  <label for="quick-search" class="visually-hidden"><?php esc_html_e('Search...', 'nextawards');?></label>
                   <input id="quick-search"class="quick-search__input" type="search" placeholder="<?php esc_attr_e('Search...', 'nextawards');?>" name="s"  aria-label="<?php esc_attr_e('Search...', 'nextawards');?>">
 
                   <?php if(esc_attr(get_theme_mod( 'nextawards_search_products', 'No')) == 'Yes') { ?> 

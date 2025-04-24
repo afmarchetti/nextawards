@@ -42,7 +42,7 @@
 <?php if(esc_attr(get_theme_mod( 'nextawards_whatsapp', '')) != '') { ?> 
 
 	<a href="https://api.whatsapp.com/send?phone=<?php echo esc_attr(get_theme_mod( 'nextawards_whatsapp', '')); ?>" target="_blank" class="logo-whats-app">
-		<div class="icon-wa"><?php esc_attr_e('Contact me via WhatsApp', 'nextawards');?></div>
+		<div class="icon-wa"><?php esc_html_e('Contact me via WhatsApp', 'nextawards');?></div>
 	</a>
 
 <?php } ?>
