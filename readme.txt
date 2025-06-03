@@ -53,6 +53,11 @@ TODO:
 - check block variation quote and create one for buttons
 - test spacing fuild system like oll. theme
 
+== 1.6.8 ==
+
+* fix menu aria label on open
+
+
 == 1.6.7 ==
 * fix warnings esc_attr_e
 

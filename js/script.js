@@ -2,6 +2,9 @@ let nextawards_menu = document.querySelector('.icon-hamburger');
 if(nextawards_menu){
 	nextawards_menu.addEventListener("click", function() {
 		document.body.classList.toggle('menu-open');
+   
+    const isOpen = document.body.classList.contains('menu-open');
+    nextawards_menu.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
 	});
 }
 
