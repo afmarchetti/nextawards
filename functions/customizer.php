@@ -113,6 +113,18 @@
 			'settings'   => 'nextawards_footer_text_color',
 		)));
 	
+	/* Header Scroll Color */
+	$wp_customize->add_setting( 'nextawards_header_scroll_color' , array(
+		'default'   => '#222',
+		'transport' => 'refresh',
+			'sanitize_callback' => 'sanitize_hex_color',
+		));
+	
+		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nextawards_header_scroll_color_control', array(
+			'label'      => __( 'Header Scroll Down Color', 'nextawards' ),
+			'section'    => 'colors',
+			'settings'   => 'nextawards_header_scroll_color',
+		)));
 
 	/* Border Color */
 	$wp_customize->add_setting( 'nextawards_border_color' , array(
@@ -231,6 +243,20 @@
         'settings'   => 'nextawards_topbar_text',
         'type'   => 'text'			
     )) );
+
+	/* Hide Search Blog */
+	$wp_customize->add_setting( 'nextawards_search_blog' , array(
+	'default'   => 'No',
+	'transport' => 'refresh',
+		'sanitize_callback' => 'nextawards_sanitize_callback_function',
+	));
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'nextawards_search_blog_control', array(
+		'label'      => __( 'Hide Search Blog Page (ex. Yes)', 'nextawards' ),
+		'section'    => 'nextawards_header',
+		'settings'   => 'nextawards_search_blog',
+		'type'   => 'text'			
+	)) );
 	
 	/* Add setting for logo white uploader */
 	$wp_customize->add_setting( 'logo_white' , array(

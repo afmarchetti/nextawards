@@ -25,7 +25,9 @@ To activate the e-commerce simply install WooCommerce and follow the wizard proc
 
 To creare a One page Scroll Structure add to the menu www.yoursite.com/#section-1 and the class .page-scroll to the menu element (the system will scroll with animation)
 
-To add parallax effect to the cover simply add "para" css class to the cover
+To add parallax effect to the cover simply add "parallax-cover" css class to the cover
+
+To add fade animation to a element simply add ".fade" css class to the element
 
 == Installation ==
 
@@ -51,7 +53,14 @@ No data is saved in the database or transferred.
 
 TODO: 
 - check block variation quote and create one for buttons
-- test spacing fuild system like oll. theme
+
+== 1.6.9 ==
+
+* eliminate css overflow .wrapper for styky element support
+* add option in customizer to hide search in blog page
+* add typography utility css and decrese size title in blog page
+* make icon cart accessible
+* add color option to the header scroll element in template trasparent
 
 == 1.6.8 ==
 

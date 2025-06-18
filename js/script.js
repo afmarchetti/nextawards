@@ -143,4 +143,4 @@ const simpleParallax = (elem, modifier) => {
   requestAnimationFrame(sp);
 };
 
-simpleParallax(".parallax-cover .wp-block-cover__image-background", 20);
+simpleParallax(".parallax-cover .wp-block-cover__image-background", 15);

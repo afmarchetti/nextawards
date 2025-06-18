@@ -17,7 +17,7 @@
  get_header(); ?>
 
 	
-			<div class="grid">
+			<div class="grid" id="blog-search">
 				<div class="col-100">
 				<?php get_search_form(); ?>
 				</div>
@@ -32,13 +32,13 @@
 		<?php if ( is_search() ) { ?>
 			<h1 class="mb-3"><?php esc_html_e('Result for:', 'nextawards'); ?> <strong><i><?php echo esc_html($s); ?></i></strong></h1>
 		<?php } else  if ( is_category() || is_tag() ) { ?>
-			<h1 class="mb-3"><?php echo single_cat_title() ?></h1>
+			<h1 class="mb-3 text-2"><?php echo single_cat_title() ?></h1>
 		<?php } else if ( is_home() ){ ?>
-			<h1 class="mb-3"><?php echo get_bloginfo( 'name' ); ?> <span class="text-3 light"><?php echo get_bloginfo( 'description' ); ?></span></h1>
+			<h1 class="mb-3 text-2"><?php echo get_bloginfo( 'name' ); ?> <span class="text-3 light"><?php echo get_bloginfo( 'description' ); ?></span></h1>
 		<?php } else if ( is_date() ){ ?>
-			<h1 class="mb-3"><?php single_month_title(' '); ?> </h1>
+			<h1 class="mb-3 text-2"><?php single_month_title(' '); ?> </h1>
 		<?php } else if ( is_archive() ){ ?>
-			<h1 class="mb-3"><?php post_type_archive_title(); ?> </h1>
+			<h1 class="mb-3 text-2"><?php post_type_archive_title(); ?> </h1>
 		<?php } ?>
 
 		</div>

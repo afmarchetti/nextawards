@@ -1,7 +1,7 @@
 /*
 Theme Name: 	Nextawards
 Description: 	Responsive Starter WordPress Theme (WooCommerce Ready) with: Minimal Style, 4 Header Style, 2 Menus, 11 Amazing Block Patterns, Trasparent Header Template, WhatsApp Chat, Cool animations, Light and fast, Full Site Editing Template! Inspired by Awards Winning Web Sites. Correct setup and installation in theme folder readme file ;)
-Version:     	1.6.8
+Version:     	1.6.9
 Author:     	Andrea Marchetti
 Site:         http://www.marchettidesign.net
 Text Domain: 	nextawards
@@ -51,20 +51,12 @@ p, ul,li {font-size: 1.05rem;}
   p, ul,li {font-size: 0.95rem;}
 }
 
-/* Typography Style Added in theme.json */
-/*
+/* Typography helpers */
 .text-0{font-size: 5rem; line-height: 100%;}
-h1, .text-1{font-size: 3.4rem;}
-h2, .text-2{font-size: 2.2rem;}
-h3, .text-3{font-size: 1.5rem;}
-h4, .text-4{font-size: 1.3rem;}
-h5, p, .text-5, ul,li{font-size: 1rem;line-height: 150%}
-h6{font-size: 0.8rem;}
-
-@media (max-width: 768px) {
-  .text-0{font-size: 4rem}
-  h1, .text-1{font-size: 2.4rem;}
-} */
+.text-1{font-size: 3.4rem;}
+.text-2{font-size: 2.2rem;}
+.text-3{font-size: 1.5rem;}
+.text-4{font-size: 1.3rem;}
 
 .evi a{color:#fff!important; background-color: var(--link-color);border-radius: 100px;padding-left: 20px!important; padding-right: 20px!important;}
 
@@ -84,7 +76,7 @@ a:focus, a:hover { color: var(--link-color-hover); text-decoration: none; }
 /* 2 Layout */
 /* ------------------------------------------------------------------------- */
 
-.wrapper{width: 100%;padding: 0 3%;overflow: hidden; position: relative;}
+.wrapper{width: 100%;padding: 0 3%; /* overflow: hidden; */ position: relative;}
 	
 /* ------------------------------------------------------------------------- *
 /* 2.1 Menu */
@@ -92,7 +84,7 @@ a:focus, a:hover { color: var(--link-color-hover); text-decoration: none; }
 
 .spacer{height: 140px;}
 
-.header__topbar{ background-color: #333; width: 100%;padding: 4px 4px;color:#fff; text-align: center;margin-right: calc(50% - 50vw);margin-left: calc(50% - 50vw);width: auto;}
+.header__topbar{ background-color: #333; width: 100%;padding: 10px 4px;color:#fff; text-align: center;margin-right: calc(50% - 50vw);margin-left: calc(50% - 50vw);width: auto;}
 @media (max-width: 794px) {
   .header__topbar{font-size: 13px;}
   .spacer{height: 110px;}
