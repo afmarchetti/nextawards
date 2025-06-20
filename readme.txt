@@ -52,7 +52,7 @@ No data is saved in the database or transferred.
 == Changelog ==
 
 == 1.7.0 ==
-- add clock variation cover
+- add block variation cover
 - add css cart WooCommerce
 - update some icons
 
