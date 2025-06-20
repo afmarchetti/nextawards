@@ -57,7 +57,6 @@ No data is saved in the database or transferred.
 - update some icons
 
 == 1.6.9 ==
-
 * eliminate css overflow .wrapper for styky element support
 * add option in customizer to hide search in blog page
 * add typography utility css and decrese size title in blog page
@@ -65,9 +64,7 @@ No data is saved in the database or transferred.
 * add color option to the header scroll element in template trasparent
 
 == 1.6.8 ==
-
 * fix menu aria label on open
-
 
 == 1.6.7 ==
 * fix warnings esc_attr_e
