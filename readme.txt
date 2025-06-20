@@ -55,6 +55,7 @@ No data is saved in the database or transferred.
 - add block variation cover
 - add css cart WooCommerce
 - update some icons
+- add scroll top
 
 == 1.6.9 ==
 * eliminate css overflow .wrapper for styky element support

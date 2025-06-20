@@ -30,7 +30,7 @@
 			<p class="sma-text-center"><?php esc_html_e('&copy; Copyright ', 'nextawards'); ?> <?php echo date("o");?>   <?php bloginfo('name'); ?>  </p>
 		</div>
 		<div class="col-50">
-			<p class="alignright sma-text-center"> <a href="#top"><i class="fa fa-angle-double-up"></i> <?php esc_html_e('Top ', 'nextawards'); ?></a></p>
+			<p class="alignright sma-text-center scroll"> <a href="#content"><i class="fa fa-angle-double-up"></i> <?php esc_html_e('Top ', 'nextawards'); ?></a></p>
 		</div>
 
 	</div>
