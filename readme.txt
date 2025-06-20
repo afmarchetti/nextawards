@@ -51,8 +51,10 @@ No data is saved in the database or transferred.
 
 == Changelog ==
 
-TODO: 
-- check block variation quote and create one for buttons
+== 1.7.0 ==
+- add clock variation cover
+- add css cart WooCommerce
+- update some icons
 
 == 1.6.9 ==
 
@@ -250,6 +252,10 @@ This theme bundles the following third-party resources:
 
 Ionicons - https://ionic.io/ionicons
 License: Distributed under the terms of the SIL OFL License 1.1 (fonts), MIT License (code), and CC BY 3.0 License (documentation)
+Copyright: https://iconduck.com/designers/craftwork
+
+Basil Icons - https://iconduck.com/sets/basil-icons
+License: Creative Commons Attribution 4.0 International. You can find all our CC BY 4.0 icons right here on Iconduck. These icons can be used for Personal & Commercial purposes.
 Copyright: Ionic, https://ionic.io
 
 Image for theme screenshot, Copyright Bango Renders

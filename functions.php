@@ -111,18 +111,47 @@ if ( ! function_exists( 'nextawards_setup' ) ) {
 			),
 		));
 
-		// block style
+		// block style quote
 		register_block_style(
 				'core/quote',
 				array(
 						'name'         => 'blue-quote',
 						'label'        => __( 'Blue Quote', 'nextawards' ),
-						'is_default'   => true,
+						'is_default'   => false,
 						'inline_style' => '.wp-block-quote.is-style-blue-quote { color: blue; }',
 				)
 		);
-	
 
+		// block style background cover blur
+		register_block_style(
+				'core/cover',
+				array(
+						'name'         => 'blur-image',
+						'label'        => __( 'Default', 'nextawards' ),
+						'is_default'   => true,
+						'inline_style' => '',
+				)
+		);
+		register_block_style(
+				'core/cover',
+				array(
+						'name'         => 'blur-image',
+						'label'        => __( 'Blur Image', 'nextawards' ),
+						'is_default'   => false,
+						'inline_style' => '.wp-block-cover.is-style-blur-image > .wp-block-cover__image-background{ filter: blur(10px); }',
+				)
+		);
+		register_block_style(
+				'core/cover',
+				array(
+						'name'         => 'blur-image-more',
+						'label'        => __( 'Blur Image More', 'nextawards' ),
+						'is_default'   => false,
+						'inline_style' => '.wp-block-cover.is-style-blur-image-more > .wp-block-cover__image-background{ filter: blur(25px);}',
+				)
+		);
+	
+	
 		/* block pattern */
 		require_once( get_template_directory() . '/functions/patterns.php' );
 
