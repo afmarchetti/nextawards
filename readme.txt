@@ -51,6 +51,9 @@ No data is saved in the database or transferred.
 
 == Changelog ==
 
+== 1.7.3 ==
+* fix color secodnary button
+
 == 1.7.2 ==
 * fix typo in text domain
 
