@@ -51,7 +51,10 @@ No data is saved in the database or transferred.
 
 == Changelog ==
 
-== 1.7.1 ==
+== 1.7.2 ==
+* fix typo in text domain
+
+== 1.7.2 ==
 * css sticky cart
 * fix css spacer mobile
 * add secondary button style

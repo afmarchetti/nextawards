@@ -155,7 +155,7 @@ if ( ! function_exists( 'nextawards_setup' ) ) {
         		'core/button',
 				array(
 					'name'         => 'secondary-button',
-					'label'        => __( 'Secondary Button', 'nextwards' ),
+					'label'        => __( 'Secondary Button', 'nextawards' ),
 					'is_default'   => false,
 					'inline_style' => '
 						.wp-block-button.is-style-secondary-button .wp-block-button__link {
