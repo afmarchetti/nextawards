@@ -1,7 +1,7 @@
 /*
 Theme Name: 	Nextawards
 Description: 	Responsive Starter WordPress Theme (WooCommerce Ready) with: Minimal Style, 4 Header Style, 2 Menus, 11 Amazing Block Patterns, Trasparent Header Template, WhatsApp Chat, Cool animations, Light and fast, Full Site Editing Template! Inspired by Awards Winning Web Sites. Correct setup and installation in theme folder readme file ;)
-Version:     	1.7.0
+Version:     	1.7.1
 Author:     	Andrea Marchetti
 Site:         http://www.marchettidesign.net
 Text Domain: 	nextawards
@@ -204,7 +204,7 @@ input.quick-search__input[type=search]{padding: 10px 3px;font-size: 13px;margin:
 @media (max-width: 1190px) {
   .page-template-menu-black .spacer,
   .page-template-blank .spacer,
-  .page-template-contained-no-title .spacer{height:44px}
+  .page-template-contained-no-title .spacer{height:60px}
   .page-template-menu-black .header__content{border:none}
 } 
 
@@ -824,7 +824,16 @@ button[type=submit] { margin-top: 10px; padding: 15px 20px; color: #fff; text-tr
 .woocommerce nav.woocommerce-pagination ul li span,
 .woocommerce nav.woocommerce-pagination ul li a { float: left; padding: 14px 19px; display: inline-block;}
 
-/* Cart */
+/* Cart & Checkout */
+
+.woocommerce-page.woocommerce-cart .cart-collaterals .cart_totals table,
+#order_review table.shop_table{background: #d4d4d4;border:none; padding: 10px;}
+
+.woocommerce-page.woocommerce-cart .cart-collaterals .cart_totals table td,
+.woocommerce-page.woocommerce-cart .cart-collaterals .cart_totals table th,
+#order_review table.shop_table td,
+#order_review table.shop_table th{border-color:#acacac!important;}
+
 
 @media screen and (min-width: 900px) {
    .woocommerce-page .woocommerce-cart-form{
@@ -857,6 +866,11 @@ button[type=submit] { margin-top: 10px; padding: 15px 20px; color: #fff; text-tr
 	.checkout.woocommerce-checkout.col2-set, .woocommerce-page .col2-set{ width:50%;float:left }
 	.checkout.woocommerce-checkout #order_review_heading,
 	.checkout.woocommerce-checkout #order_review{width:45%; float:right }
+  
+  /* Sticky Cart */
+  .woocommerce-page .checkout.woocommerce-checkout #order_review_heading{position: sticky;top:160px}
+  .woocommerce-page .checkout.woocommerce-checkout #order_review{position: sticky;top:200px}
+  .woocommerce-page .checkout.woocommerce-checkout{float:left; width: 100%;position: relative;}
 	
 	.woocommerce .col2-set .col-1, 
 	.woocommerce-page .col2-set .col-1,

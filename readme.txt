@@ -51,11 +51,16 @@ No data is saved in the database or transferred.
 
 == Changelog ==
 
+== 1.7.1 ==
+* css sticky cart
+* fix css spacer mobile
+* add secondary button style
+
 == 1.7.0 ==
-- add block variation cover
-- add css cart WooCommerce
-- update some icons
-- add scroll top
+* add block variation cover
+* add css cart WooCommerce
+* update some icons
+* add scroll top
 
 == 1.6.9 ==
 * eliminate css overflow .wrapper for styky element support

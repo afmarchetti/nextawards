@@ -139,6 +139,45 @@
 		'settings'   => 'nextawards_border_color',
 	)));
 
+	/* Secondary Button Color */
+	$wp_customize->add_setting( 'nextawards_secondary_button_color' , array(
+    'default'   => '#ea5a39',
+    'transport' => 'refresh',
+		'sanitize_callback' => 'sanitize_hex_color',
+	));
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nextawards_secondary_button_color_control', array(
+		'label'      => __( 'Secondary Button Color', 'nextawards' ),
+		'section'    => 'colors',
+		'settings'   => 'nextawards_secondary_button_color',
+	)));
+
+	/* Secondary Button Hover Color */
+	$wp_customize->add_setting( 'nextawards_secondary_button_hover_color' , array(
+    'default'   => '#d33a32',
+    'transport' => 'refresh',
+		'sanitize_callback' => 'sanitize_hex_color',
+	));
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nextawards_secondary_button_hover_color_control', array(
+		'label'      => __( 'Secondary Button Hover Color', 'nextawards' ),
+		'section'    => 'colors',
+		'settings'   => 'nextawards_secondary_button_hover_color',
+	)));
+
+	/* Secondary Button Text Color */
+	$wp_customize->add_setting( 'nextawards_secondary_button_text_color' , array(
+    'default'   => '#ffffff',
+    'transport' => 'refresh',
+		'sanitize_callback' => 'sanitize_hex_color',
+	));
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nextawards_secondary_button_text_color_control', array(
+		'label'      => __( 'Secondary Button Text Color', 'nextawards' ),
+		'section'    => 'colors',
+		'settings'   => 'nextawards_secondary_button_text_color',
+	)));
+
 
 	/* Header Section */
 	$wp_customize->add_section( 'nextawards_header' , array(
