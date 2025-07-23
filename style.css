@@ -1,7 +1,7 @@
 /*
 Theme Name: 	Nextawards
 Description: 	Responsive Starter WordPress Theme (WooCommerce Ready) with: Minimal Style, 4 Header Style, 2 Menus, 11 Amazing Block Patterns, Trasparent Header Template, WhatsApp Chat, Cool animations, Light and fast, Full Site Editing Template! Inspired by Awards Winning Web Sites. Correct setup and installation in theme folder readme file ;)
-Version:     	1.7.3
+Version:     	1.7.4
 Author:     	Andrea Marchetti
 Site:         http://www.marchettidesign.net
 Text Domain: 	nextawards
@@ -26,7 +26,7 @@ img{height: auto;max-width: 100%;}
 a{text-decoration: none;}
 hr{border:none; border-bottom: 1px solid #000}
 strong {font-weight: bold}
-
+html body {overflow-x:hidden;}
 body.admin-bar .header { position: fixed; top: 32px; z-index: 1000;}
 
 /* ------------------------------------------------------------------------- *
@@ -863,19 +863,24 @@ button[type=submit] { margin-top: 10px; padding: 15px 20px; color: #fff; text-tr
 .woocommerce .place-order .button{font-size: 18px;font-weight: bold;}
 
 @media (min-width: 998px){
-	.checkout.woocommerce-checkout.col2-set, .woocommerce-page .col2-set{ width:50%;float:left }
-	.checkout.woocommerce-checkout #order_review_heading,
-	.checkout.woocommerce-checkout #order_review{width:45%; float:right }
+	.woocommerce-checkout .checkout.woocommerce-checkout.col2-set, 
+  .woocommerce-checkout .col2-set{ width:50%;float:left }
+	.woocommerce-checkout .checkout.woocommerce-checkout #order_review_heading,
+	.woocommerce-checkout .checkout.woocommerce-checkout #order_review{width:45%; float:right } 
   
   /* Sticky Cart */
   .woocommerce-page .checkout.woocommerce-checkout #order_review_heading{position: sticky;top:160px}
   .woocommerce-page .checkout.woocommerce-checkout #order_review{position: sticky;top:200px}
   .woocommerce-page .checkout.woocommerce-checkout{float:left; width: 100%;position: relative;}
 	
-	.woocommerce .col2-set .col-1, 
-	.woocommerce-page .col2-set .col-1,
-	.woocommerce .col2-set .col-2, 
-	.woocommerce-page .col2-set .col-2 {width:100%}
+	.woocommerce-cart .woocommerce .col2-set .col-1, 
+	.woocommerce-cart .woocommerce-page .col2-set .col-1,
+	.woocommerce-cart .woocommerce .col2-set .col-2, 
+	.woocommerce-cart .woocommerce-page .col2-set .col-2,
+  .woocommerce-checkout .woocommerce .col2-set .col-1, 
+	.woocommerce-checkout .woocommerce-page .col2-set .col-1,
+	.woocommerce-checkout .woocommerce .col2-set .col-2, 
+	.woocommerce-checkout .woocommerce-page .col2-set .col-2  {width:100%}
 	
 	.woocommerce #payment #place_order, 
 	.woocommerce-page #payment #place_order{width:100%; display:block; padding:20px}

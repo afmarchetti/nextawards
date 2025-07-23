@@ -51,6 +51,10 @@ No data is saved in the database or transferred.
 
 == Changelog ==
 
+== 1.7.4 ==
+* fix css orizontal scroll overflow windows
+* fix registration woocommerce layout 
+
 == 1.7.3 ==
 * fix color secodnary button
 
