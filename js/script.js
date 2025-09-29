@@ -77,7 +77,7 @@ fadeElms.forEach(el => observer.observe(el));
 
 /* Animation on Scroll System v2 (INTERSECTION OBSERVER API) */
 (() => {
-  const SELECTOR = '.reveal, .reveal-stagger';
+  const SELECTOR = '.reveal';
 
   if (!('IntersectionObserver' in window)) {
     document.addEventListener('DOMContentLoaded', () => {

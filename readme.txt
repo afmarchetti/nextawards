@@ -53,6 +53,10 @@ No data is saved in the database or transferred.
 
 == Changelog ==
 
+== 1.7.9 ==
+
+* eliminate stagger becouse af a bug (fix soon), but add delay system
+
 == 1.7.8 ==
 
 * fix root margin animation system

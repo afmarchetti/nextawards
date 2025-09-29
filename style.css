@@ -1,7 +1,7 @@
 /*
 Theme Name: 	Nextawards
 Description: 	Responsive Starter WordPress Theme (WooCommerce Ready) with: Minimal Style, 4 Header Style, 2 Menus, 11 Amazing Block Patterns, Trasparent Header Template, WhatsApp Chat, Cool animations, Light and fast, Full Site Editing Template! Inspired by Awards Winning Web Sites. Correct setup and installation in theme folder readme file ;)
-Version:     	1.7.8
+Version:     	1.7.9
 Author:     	Andrea Marchetti
 Site:         http://www.marchettidesign.net
 Text Domain: 	nextawards
@@ -653,24 +653,22 @@ button[type=submit] { margin-top: 10px; padding: 15px 20px; color: #fff; text-tr
   100% { clip-path: inset(0 0 0 0); /* fully visible */ transform: translateY(0); /* normal position */ }
 }
 
-/* Stagger base for children */
-.reveal-stagger > * { opacity: 0; transform: translateY(20px); transition: opacity .6s ease-out, transform .8s cubic-bezier(.2,.7,.25,1); will-change: opacity, transform; }
-
-/* Stagger active state */
-.reveal-stagger.is-inview > * { opacity: 1; transform: none; }
-
-/* Automatic stagger for first 6 children */
-.reveal-stagger.is-inview > *:nth-child(1) { transition-delay: 0s; }
-.reveal-stagger.is-inview > *:nth-child(2) { transition-delay: 0.1s; }
-.reveal-stagger.is-inview > *:nth-child(3) { transition-delay: 0.2s; }
-.reveal-stagger.is-inview > *:nth-child(4) { transition-delay: 0.3s; }
-.reveal-stagger.is-inview > *:nth-child(5) { transition-delay: 0.4s; }
-.reveal-stagger.is-inview > *:nth-child(6) { transition-delay: 0.5s; }
-
 /* Accessibility: disable animations */
 @media (prefers-reduced-motion: reduce) {
-  .reveal, .reveal-stagger { transition: none !important; animation: none !important; opacity: 1 !important; transform: none !important; filter: none !important; clip-path: none !important; }
+  .reveal { transition: none !important; animation: none !important; opacity: 1 !important; transform: none !important; filter: none !important; clip-path: none !important; }
 }
+
+/* Delay utilities */
+.delay-01 { transition-delay: .1s; }
+.delay-02 { transition-delay: .2s; }
+.delay-03 { transition-delay: .3s; }
+.delay-04 { transition-delay: .4s; }
+.delay-05 { transition-delay: .5s; }
+.delay-06 { transition-delay: .6s; }
+.delay-07 { transition-delay: .7s; }
+.delay-08 { transition-delay: .8s; }
+.delay-09 { transition-delay: .9s; }
+.delay-10 { transition-delay: 1s; }
 
 /* Animation System v2 End */
 
