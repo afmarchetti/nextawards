@@ -53,6 +53,10 @@ No data is saved in the database or transferred.
 
 == Changelog ==
 
+== 1.7.8 ==
+
+* fix root margin animation system
+
 == 1.7.7 ==
 
 * add animation system v2 with class animation and stagger animation support

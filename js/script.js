@@ -94,7 +94,7 @@ fadeElms.forEach(el => observer.observe(el));
         io.unobserve(el);
       }
     }
-  }, { rootMargin: '0px 0px -10% 0px', threshold: 0 });
+  }, { rootMargin: '0px 0px -20% 0px', threshold: 0 });
 
   const observeAll = () => {
     document.querySelectorAll(SELECTOR).forEach(el => {
