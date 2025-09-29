@@ -75,6 +75,46 @@ const observer = new IntersectionObserver(observerCallback, observerOptions);
 fadeElms.forEach(el => observer.observe(el));
 
 
+/* Animation on Scroll System v2 (INTERSECTION OBSERVER API) */
+(() => {
+  const SELECTOR = '.reveal, .reveal-stagger';
+
+  if (!('IntersectionObserver' in window)) {
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll(SELECTOR).forEach(el => el.classList.add('is-inview'));
+    });
+    return;
+  }
+
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      if (e.isIntersecting) {
+        const el = e.target;
+        requestAnimationFrame(() => el.classList.add('is-inview'));
+        io.unobserve(el);
+      }
+    }
+  }, { rootMargin: '0px 0px -10% 0px', threshold: 0 });
+
+  const observeAll = () => {
+    document.querySelectorAll(SELECTOR).forEach(el => {
+      if (!el.classList.contains('is-inview')) io.observe(el);
+    });
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', observeAll, { once: true });
+  } else {
+    observeAll();
+  }
+
+  // Per supportare elementi aggiunti dopo (es. CMS, SPA)
+  new MutationObserver(observeAll)
+    .observe(document.documentElement, { childList: true, subtree: true });
+})();
+/* Animation on Scroll System End */
+
+
 // js scroll to
 document.querySelectorAll('.scroll a[href^="#"]').forEach(elem => {
     elem.addEventListener('click', e => {

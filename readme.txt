@@ -29,6 +29,8 @@ To add parallax effect to the cover simply add "parallax-cover" css class to the
 
 To add fade animation to a element simply add ".fade" css class to the element
 
+To add advanced Scroll Reveal Animations: Use the class .reveal to animate elements when they enter the viewport. The script adds .is-inview automatically on scroll. Variants (combine with .reveal): .reveal-up, .reveal-down, .reveal-left, .reveal-right, .reveal-zoom, .reveal-skew, .reveal-blur, .reveal-clip → masked reveal from bottom - Stagger: Use .reveal-stagger on a container to animate its children one by one.
+
 == Installation ==
 
 1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
@@ -50,6 +52,16 @@ No data is saved in the database or transferred.
 
 
 == Changelog ==
+
+== 1.7.7 ==
+
+* add animation system v2 with class animation and stagger animation support
+
+== 1.7.6 ==
+* fix css button message add to cart and checkout payment box color
+
+== 1.7.5 ==
+* fix css input checkout
 
 == 1.7.4 ==
 * fix css orizontal scroll overflow windows
