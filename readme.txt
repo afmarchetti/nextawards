@@ -29,7 +29,7 @@ To add parallax effect to the cover simply add "parallax-cover" css class to the
 
 To add fade animation to a element simply add ".fade" css class to the element
 
-To add advanced Scroll Reveal Animations: Use the class .reveal to animate elements when they enter the viewport. The script adds .is-inview automatically on scroll. Variants (combine with .reveal): .reveal-up, .reveal-down, .reveal-left, .reveal-right, .reveal-zoom, .reveal-skew, .reveal-blur, .reveal-clip → masked reveal from bottom - Stagger: Use .reveal-stagger on a container to animate its children one by one.
+To add advanced Scroll Reveal Animations: Use the class .reveal to animate elements when they enter the viewport. The script adds .is-inview automatically on scroll. Variants (combine with .reveal): .reveal-up, .reveal-down, .reveal-left, .reveal-right, .reveal-zoom, .reveal-skew, .reveal-blur, .reveal-clip → masked reveal from bottom - Delay: Use .delay-01 to 0.1 seconds of delay you can add .delay-02, .delay-03 ... until .delay-10 (1 seconds delay).
 
 == Installation ==
 
