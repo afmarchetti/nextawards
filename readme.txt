@@ -53,6 +53,14 @@ No data is saved in the database or transferred.
 
 == Changelog ==
 
+== 1.8.0 ==
+* add animation duration system
+* add more professional reveal-clip animations
+* fix additiona filed checkout css
+* fix css sticky checkout
+* fix css button woocommerce
+* fix css register in woocommerce
+
 == 1.7.9 ==
 
 * eliminate stagger becouse af a bug (fix soon), but add delay system

@@ -1,7 +1,7 @@
 /*
 Theme Name: 	Nextawards
 Description: 	Responsive Starter WordPress Theme (WooCommerce Ready) with: Minimal Style, 4 Header Style, 2 Menus, 11 Amazing Block Patterns, Trasparent Header Template, WhatsApp Chat, Cool animations, Light and fast, Full Site Editing Template! Inspired by Awards Winning Web Sites. Correct setup and installation in theme folder readme file ;)
-Version:     	1.7.9
+Version:     	1.8.0
 Author:     	Andrea Marchetti
 Site:         http://www.marchettidesign.net
 Text Domain: 	nextawards
@@ -642,16 +642,11 @@ button[type=submit] { margin-top: 10px; padding: 15px 20px; color: #fff; text-tr
 .reveal.is-inview { opacity: 1; transform: none; filter: none; }
 
 /* Clip-path effect */
-.reveal.reveal-clip { display: inline-block; position: relative; overflow: hidden; /* create mask */ clip-path: inset(0 0 100% 0); /* hidden from bottom */ transform: translateY(20px); /* placed below */ }
+.reveal.reveal-clip{ height: 0; interpolate-size: allow-keywords; overflow: hidden; transition: height 1s cubic-bezier(.2,.7,.25,1), opacity .6s ease-out, transform .6s cubic-bezier(.2,.7,.25,1); will-change: height, opacity, transform; padding-bottom: 0px; }
 
 /* Clip-path active state */
-.reveal.reveal-clip.is-inview { animation: clip 0.9s cubic-bezier(.2,.7,.25,1) forwards; }
+.reveal.reveal-clip.is-inview {height:auto; opacity: 1; padding-bottom: 5px;  }
 
-/* Keyframes for clip-path reveal */
-@keyframes clip {
-  0% { clip-path: inset(0% 0 100% 0); /* masked at bottom */ transform: translateY(0px); /* pushed down */ }
-  100% { clip-path: inset(0 0 0 0); /* fully visible */ transform: translateY(0); /* normal position */ }
-}
 
 /* Accessibility: disable animations */
 @media (prefers-reduced-motion: reduce) {
@@ -659,16 +654,31 @@ button[type=submit] { margin-top: 10px; padding: 15px 20px; color: #fff; text-tr
 }
 
 /* Delay utilities */
-.delay-01 { transition-delay: .1s; }
-.delay-02 { transition-delay: .2s; }
-.delay-03 { transition-delay: .3s; }
-.delay-04 { transition-delay: .4s; }
-.delay-05 { transition-delay: .5s; }
-.delay-06 { transition-delay: .6s; }
-.delay-07 { transition-delay: .7s; }
-.delay-08 { transition-delay: .8s; }
-.delay-09 { transition-delay: .9s; }
-.delay-10 { transition-delay: 1s; }
+.delay-01 { transition-delay: .1s!important; }
+.delay-02 { transition-delay: .2s!important; }
+.delay-03 { transition-delay: .3s!important; }
+.delay-04 { transition-delay: .4s!important; }
+.delay-05 { transition-delay: .5s!important; }
+.delay-06 { transition-delay: .6s!important; }
+.delay-07 { transition-delay: .7s!important; }
+.delay-08 { transition-delay: .8s!important; }
+.delay-09 { transition-delay: .9s!important; }
+.delay-10 { transition-delay: 1s!important; }
+.delay-11 { transition-delay: 1.1s!important; }
+.delay-12 { transition-delay: 1.2s!important; }
+.delay-13 { transition-delay: 1.3s!important; }
+.delay-14 { transition-delay: 1.4s!important; }
+.delay-15 { transition-delay: 1.5s!important; }
+
+/* Duration utilities */
+.duration-03 { transition-duration: .3s !important; animation-duration: .3s !important; }
+.duration-05 { transition-duration: .5s !important; animation-duration: .5s !important; }
+.duration-07 { transition-duration: .7s !important; animation-duration: .7s !important; }
+.duration-10 { transition-duration: 1s !important; animation-duration: 1s !important; }
+.duration-15 { transition-duration: 1.5s !important; animation-duration: 1.5s !important; }
+.duration-20 { transition-duration: 2s !important; animation-duration: 2s !important; }
+.duration-25 { transition-duration: 2.5s !important; animation-duration: 2.5s !important; }
+.duration-30 { transition-duration: 3s !important; animation-duration: 3s !important; }
 
 /* Animation System v2 End */
 
@@ -719,6 +729,7 @@ button[type=submit] { margin-top: 10px; padding: 15px 20px; color: #fff; text-tr
 .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button,
 .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button,
 .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) input.button,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt.disabled,
 :where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce #respond input#submit,
 :where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce a.button,
 :where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce button.button,
@@ -911,7 +922,8 @@ button[type=submit] { margin-top: 10px; padding: 15px 20px; color: #fff; text-tr
 .checkout.woocommerce-checkout input[type=password],
 .checkout.woocommerce-checkout input[type=email],
 .checkout.woocommerce-checkout input[type=url],
-.checkout.woocommerce-checkout textarea{border: 2px solid #ddd}
+.checkout.woocommerce-checkout .woocommerce-additional-fields textarea,
+.woocommerce form .form-row .input-text{border: 2px solid #ddd}
 
 .woocommerce .checkout-button,
 .woocommerce .place-order .button{font-size: 18px;font-weight: bold;}
@@ -933,8 +945,8 @@ button[type=submit] { margin-top: 10px; padding: 15px 20px; color: #fff; text-tr
 	.woocommerce-checkout .checkout.woocommerce-checkout #order_review{width:45%; float:right } 
   
   /* Sticky Cart */
-  .woocommerce-page .checkout.woocommerce-checkout #order_review_heading{position: sticky;top:160px} 
-  .woocommerce-page .checkout.woocommerce-checkout #order_review{position: sticky;top:200px}
+  /* .woocommerce-page .checkout.woocommerce-checkout #order_review_heading{position: sticky;top:160px}  */
+  .woocommerce-page .checkout.woocommerce-checkout #order_review{position: sticky;top:150px}
   .woocommerce-page .checkout.woocommerce-checkout{float:left; width: 100%;position: relative;}
 	
 	.woocommerce-cart .woocommerce .col2-set .col-1, 
@@ -948,6 +960,7 @@ button[type=submit] { margin-top: 10px; padding: 15px 20px; color: #fff; text-tr
 	
 	.woocommerce #payment #place_order, 
 	.woocommerce-page #payment #place_order{width:100%; display:block; padding:20px}
+
 }
 
 
