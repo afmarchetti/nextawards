@@ -642,7 +642,7 @@ button[type=submit] { margin-top: 10px; padding: 15px 20px; color: #fff; text-tr
 .reveal.is-inview { opacity: 1; transform: none; filter: none; }
 
 /* Clip-path effect */
-.reveal.reveal-clip{ height: 0; interpolate-size: allow-keywords; overflow: hidden; transition: height 1s cubic-bezier(.2,.7,.25,1), opacity .6s ease-out, transform .6s cubic-bezier(.2,.7,.25,1); will-change: height, opacity, transform; padding-bottom: 0px; }
+.reveal.reveal-clip{ height: 0; interpolate-size: allow-keywords; overflow: hidden; transition: height 1s cubic-bezier(.2,.7,.25,1), opacity .3s ease-out, transform .6s cubic-bezier(.2,.7,.25,1); will-change: height, opacity, transform; padding-bottom: 0px; }
 
 /* Clip-path active state */
 .reveal.reveal-clip.is-inview {height:auto; opacity: 1; padding-bottom: 5px;  }
@@ -671,11 +671,25 @@ button[type=submit] { margin-top: 10px; padding: 15px 20px; color: #fff; text-tr
 .delay-15 { transition-delay: 1.5s!important; }
 
 /* Duration utilities */
+.duration-01 { transition-duration: .1s !important; animation-duration: .1s !important; }
+.duration-02 { transition-duration: .2s !important; animation-duration: .2s !important; }
 .duration-03 { transition-duration: .3s !important; animation-duration: .3s !important; }
+.duration-04 { transition-duration: .4s !important; animation-duration: .4s !important; }
 .duration-05 { transition-duration: .5s !important; animation-duration: .5s !important; }
+.duration-06 { transition-duration: .6s !important; animation-duration: .6s !important; }
 .duration-07 { transition-duration: .7s !important; animation-duration: .7s !important; }
+.duration-08 { transition-duration: .8s !important; animation-duration: .8s !important; }
+.duration-09 { transition-duration: .9s !important; animation-duration: .9s !important; }
 .duration-10 { transition-duration: 1s !important; animation-duration: 1s !important; }
+.duration-11 { transition-duration: 1.1s !important; animation-duration: 1.1s !important; }
+.duration-12 { transition-duration: 1.2s !important; animation-duration: 1.2s !important; }
+.duration-13 { transition-duration: 1.3s !important; animation-duration: 1.3s !important; }
+.duration-14 { transition-duration: 1.4s !important; animation-duration: 1.4s !important; }
 .duration-15 { transition-duration: 1.5s !important; animation-duration: 1.5s !important; }
+.duration-16 { transition-duration: 1.6s !important; animation-duration: 1.6s !important; }
+.duration-17 { transition-duration: 1.7s !important; animation-duration: 1.7s !important; }
+.duration-18 { transition-duration: 1.8s !important; animation-duration: 1.8s !important; }
+.duration-19 { transition-duration: 1.9s !important; animation-duration: 1.9s !important; }
 .duration-20 { transition-duration: 2s !important; animation-duration: 2s !important; }
 .duration-25 { transition-duration: 2.5s !important; animation-duration: 2.5s !important; }
 .duration-30 { transition-duration: 3s !important; animation-duration: 3s !important; }
