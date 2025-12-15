@@ -303,7 +303,7 @@ input.quick-search__input[type=search]{padding: 10px 3px;font-size: 13px;margin:
 }
 
 
- 
+
 
 /* ------------------------------------------------------------------------- *
 /* 2.4 Sections */
@@ -370,12 +370,14 @@ body .alignfull {
     max-width: 1000%;
     margin-right: calc(25% - 25vw);
     margin-left: calc(25% - 25vw);
-  }
+  } 
+  
   .alignwide img,
   .alignfull img {
     display: block;
     margin: 0 auto;
   }
+
 }
 
 /* Image Caption */
