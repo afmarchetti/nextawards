@@ -6,10 +6,130 @@
             "wideSize": "1300px"
         },
         "appearanceTools": true, 
+		"color": {
+			"gradients": [
+				{
+					"name": "Black",
+					"slug": "black",
+					"gradient": "linear-gradient(135deg, rgba(0, 0, 0, 1), rgba(20, 17, 30, 0))"
+				},
+				{
+					"name": "Brown",
+					"slug": "brow",
+					"gradient": "linear-gradient(135deg, rgba(81, 31, 31, 1), rgba(97, 97, 97, 0))"
+				},
+				{
+					"name": "Blue",
+					"slug": "blue",
+					"gradient": "linear-gradient(135deg, rgba(84, 73, 113, 1), rgba(35, 26, 28, 1))"
+				},
+				{
+					"name": "Green",
+					"slug": "green",
+					"gradient": "linear-gradient(135deg, rgba(101, 216, 82, 1), rgba(27, 216, 179, 1))"
+				},
+				{
+					"name": "Purple",
+					"slug": "purple",
+					"gradient": "linear-gradient(135deg, rgba(192, 43, 230, 1), rgba(74, 38, 173, 1))"
+				}
+			]
+		},
+		"shadow": {
+			"defaultPresets": false,
+            "presets": [
+                {
+                    "name": "Extra Large Dark",
+                    "slug": "extra-large-dark",
+                    "shadow": "0px 536px 150px 0px rgba(20, 17, 31, 0.00), 0px 343px 137px 0px rgba(20, 17, 31, 0.01), 0px 193px 116px 0px rgba(20, 17, 31, 0.05), 0px 86px 86px 0px rgba(20, 17, 31, 0.09), 0px 21px 47px 0px rgba(20, 17, 31, 0.10)"
+                },
+				{
+                    "name": "Large Dark",
+                    "slug": "large-dark",
+                    "shadow": "0px 219px 61px 0px rgba(20, 17, 31, 0.00), 0px 140px 56px 0px rgba(20, 17, 31, 0.01), 0px 79px 47px 0px rgba(20, 17, 31, 0.05), 0px 35px 35px 0px rgba(20, 17, 31, 0.09), 0px 9px 19px 0px rgba(20, 17, 31, 0.10)"
+                },
+				{
+                    "name": "Medium Dark",
+                    "slug": "medium-dark",
+                    "shadow": "0px 66px 18px 0px rgba(20, 17, 31, 0.00), 0px 42px 17px 0px rgba(20, 17, 31, 0.01), 0px 24px 14px 0px rgba(20, 17, 31, 0.05), 0px 10px 10px 0px rgba(20, 17, 31, 0.09), 0px 3px 6px 0px rgba(20, 17, 31, 0.10)"
+                },
+				{
+                    "name": "Small Dark",
+                    "slug": "small-dark",
+                    "shadow": "0px 16px 4px 0px rgba(20, 17, 31, 0.00), 0px 10px 4px 0px rgba(20, 17, 31, 0.01), 0px 6px 3px 0px rgba(20, 17, 31, 0.05), 0px 3px 3px 0px rgba(20, 17, 31, 0.09), 0px 1px 1px 0px rgba(20, 17, 31, 0.10)"
+                },
+				{
+                    "name": "Extra Large Light",
+                    "slug": "extra-large-light",
+                    "shadow": "0px 536px 150px 0px rgba(20, 17, 31, 0.00), 0px 343px 137px 0px rgba(20, 17, 31, 0.01), 0px 193px 116px 0px rgba(20, 17, 31, 0.03), 0px 86px 86px 0px rgba(20, 17, 31, 0.04), 0px 21px 47px 0px rgba(20, 17, 31, 0.05)"
+                },
+				{
+                    "name": "Large Light",
+                    "slug": "large-light",
+                    "shadow": "0px 219px 61px 0px rgba(20, 17, 31, 0.00), 0px 140px 56px 0px rgba(20, 17, 31, 0.01), 0px 79px 47px 0px rgba(20, 17, 31, 0.03), 0px 35px 35px 0px rgba(20, 17, 31, 0.04), 0px 9px 19px 0px rgba(20, 17, 31, 0.05)"
+                },
+				{
+                    "name": "Medium Light",
+                    "slug": "medium-light",
+                    "shadow": "0px 69px 19px 0px rgba(20, 17, 31, 0.00), 0px 44px 18px 0px rgba(20, 17, 31, 0.01), 0px 25px 15px 0px rgba(20, 17, 31, 0.03), 0px 11px 11px 0px rgba(20, 17, 31, 0.04), 0px 3px 6px 0px rgba(20, 17, 31, 0.05)"
+                },
+				{
+                    "name": "Small Light",
+                    "slug": "small-light",
+                    "shadow": "0px 16px 5px 0px rgba(20, 17, 31, 0.00), 0px 10px 4px 0px rgba(20, 17, 31, 0.00), 0px 6px 4px 0px rgba(20, 17, 31, 0.02), 0px 3px 3px 0px rgba(20, 17, 31, 0.03), 0px 1px 1px 0px rgba(20, 17, 31, 0.03)"
+                }
+            ]
+        },
         "spacing": {
+			"defaultSpacingSizes": false,
+			"spacingSizes": [
+				{
+					"name": "Small",
+					"size": "clamp(.5rem, 2.5vw, 1rem)",
+					"slug": "small"
+				},
+				{
+					"name": "Medium",
+					"size": "clamp(1.5rem, 4vw, 2rem)",
+					"slug": "medium"
+				},
+				{
+					"name": "Large",
+					"size": "clamp(2rem, 5vw, 3rem)",
+					"slug": "large"
+				},
+				{
+					"name": "Extra Large",
+					"size": "clamp(3rem, 7vw, 5rem)",
+					"slug": "x-large"
+				},
+				{
+					"name": "2xl",
+					"size": "clamp(4rem, 9vw, 7rem)",
+					"slug": "xx-large"
+				},
+				{
+					"name": "3xl",
+					"size": "clamp(5rem, 12vw, 9rem)",
+					"slug": "xxx-large"
+				},
+				{
+					"name": "4xl",
+					"size": "clamp(6rem, 14vw, 13rem)",
+					"slug": "xxxx-large"
+				}
+			],
+			"units": [
+				"px",
+				"em",
+				"rem",
+				"vh",
+				"vw",
+				"%"
+			],
+			"blockGap": true,
 			"padding": true,
-			"margin": true,
-			"units": [ "px", "em", "rem", "vh", "vw", "%" ]
+			"margin": true
 		},
         "typography": {
             "lineHeight": true,

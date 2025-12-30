@@ -199,6 +199,20 @@
 		'type'   => 'text'			
 	)) );
 
+	/* Header Wide Fix */
+	$wp_customize->add_setting( 'nextawards_header_wide_fix' , array(
+	'default'   => 'No',
+	'transport' => 'refresh',
+		'sanitize_callback' => 'nextawards_sanitize_callback_function',
+	));
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'nextawards_header_wide_fix_control', array(
+		'label'      => __( 'Header Wide Fixed (ex. Yes )', 'nextawards' ),
+		'section'    => 'nextawards_header',
+		'settings'   => 'nextawards_header_wide_fix',
+		'type'   => 'text'			
+	)) );
+
 	/* Menu Left */
 	$wp_customize->add_setting( 'nextawards_menu_left' , array(
 	'default'   => 'No',

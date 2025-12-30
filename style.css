@@ -1,7 +1,7 @@
 /*
 Theme Name: 	Nextawards
 Description: 	Responsive Starter WordPress Theme (WooCommerce Ready) with: Minimal Style, 4 Header Style, 2 Menus, 11 Amazing Block Patterns, Trasparent Header Template, WhatsApp Chat, Cool animations, Light and fast, Full Site Editing Template! Inspired by Awards Winning Web Sites. Correct setup and installation in theme folder readme file ;)
-Version:     	1.8.0
+Version:     	1.8.1
 Author:     	Andrea Marchetti
 Site:         http://www.marchettidesign.net
 Text Domain: 	nextawards
@@ -62,7 +62,6 @@ p, ul,li {font-size: 1.05rem;}
 .evi a{color:#fff!important; background-color: var(--link-color);border-radius: 100px;padding-left: 20px!important; padding-right: 20px!important;}
 
 
-
 /* Link color */
 a { color: var(--link-color); }
 a:focus, a:hover { color: var(--link-color-hover); text-decoration: none; }
@@ -91,7 +90,7 @@ a:focus, a:hover { color: var(--link-color-hover); text-decoration: none; }
   .spacer{height: 110px;}
 
 }  
-.header{ background-color: var(--site-bg); position: fixed; top:0;  left:0; z-index: 9999; width: 100%;padding: 0px 4%;}
+.header{ background-color: var(--site-bg); position: fixed; top:0;  left:0; z-index: 9999; width: 100%;padding: 0px 3%;}
 .header__content{width: 100%;margin: 0 auto; display: flex;justify-content: space-between; padding:10px 0;border-bottom: 1px solid #222; position: relative;}
 
 .header__logo,
@@ -109,17 +108,11 @@ a:focus, a:hover { color: var(--link-color-hover); text-decoration: none; }
 .menu li{display: inline-block;position: relative}
 .menu li a{color:var(--site-text-color); opacity: 0.8;display: block;padding: 16px;font-size: 15px;font-weight: bold;}
 
-.icon-hamburger{display: none;}
-
-/* hide classes (used on the logos) */
 @media (min-width: 1190px) {
-  .hide-desktop{display: none;}
-}
-@media (max-width: 1190px) {
-  .hide-mobile{display: none;}
+  .menu > li.current-menu-item > a::before{ content: ""; position: absolute; left: 16px; right: 16px; bottom: 10px; height: 2px; background: #000; opacity:0.2;}
 }
 
-.hide-all{display: none;}
+.icon-hamburger{display: none;}
 
 /* Quick search */
 
@@ -304,7 +297,6 @@ input.quick-search__input[type=search]{padding: 10px 3px;font-size: 13px;margin:
 
 
 
-
 /* ------------------------------------------------------------------------- *
 /* 2.4 Sections */
 /* ------------------------------------------------------------------------- */
@@ -379,6 +371,49 @@ body .alignfull {
   }
 
 }
+
+/* Align Wide Fix Template System ----------------------- */
+
+/* Normale center content */
+body .is-align-system > :where(:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright)){
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Nested elements */
+body .is-align-system > .alignfull > :where(h1, h2, h3, h4, h5, h6, p, figure, .wp-block-group ):not(.alignfull):not(.alignwide) {
+	max-width: 850px;
+}
+
+/* Alignwide center */
+body .is-align-system .alignwide {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Alignfull center */
+body .is-align-system .alignfull {
+	max-width: none;
+	padding-right:3%;
+	padding-left:3%;
+  margin-left: -3.2%;
+  margin-right: -3.2%; 
+}
+
+/* Align left and right */
+body .is-align-system > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }
+body .is-align-system > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0em; }
+
+@media (min-width: 1450px){
+	body .is-align-system .alignwide {max-width: 1500px;}
+} 
+@media (min-width: 1800px){
+	body .is-align-system .alignwide {max-width: 1700px;}
+}
+
+/* End Align Wide Fix Template System ----------------------- */
 
 /* Image Caption */
 .wp-caption { margin-bottom: 20px; padding: 10px; max-width: 97%; border: 1px solid #eee; text-align: center; }
@@ -509,6 +544,19 @@ button[type=submit] { margin-top: 10px; padding: 15px 20px; color: #fff; text-tr
   .sma-100 { width: 100%; }
 }
 
+/* Simple Utilities Class */
+@media (min-width: 1190px) {
+  .desk-hide{display: none;}
+}
+@media (max-width: 1190px) {
+  .sma-hide{display: none;}
+}
+
+.all-hide{display: none;}
+
+@media (max-width: 781px) {
+  .sma-column-reverse{ flex-direction: column-reverse;}
+}
 
 /* Accessibility */
 
