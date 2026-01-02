@@ -56,6 +56,10 @@ No data is saved in the database or transferred.
 
 == Changelog ==
 
+== 1.8.2 ==
+* Add menu current item options style
+* fix spacer in align-wide-template
+
 == 1.8.1 ==
 * align wide fix template system
 * padding responsive system

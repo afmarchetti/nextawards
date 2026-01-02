@@ -1,7 +1,7 @@
 /*
 Theme Name: 	Nextawards
 Description: 	Responsive Starter WordPress Theme (WooCommerce Ready) with: Minimal Style, 4 Header Style, 2 Menus, 11 Amazing Block Patterns, Trasparent Header Template, WhatsApp Chat, Cool animations, Light and fast, Full Site Editing Template! Inspired by Awards Winning Web Sites. Correct setup and installation in theme folder readme file ;)
-Version:     	1.8.1
+Version:     	1.8.2
 Author:     	Andrea Marchetti
 Site:         http://www.marchettidesign.net
 Text Domain: 	nextawards
@@ -108,10 +108,6 @@ a:focus, a:hover { color: var(--link-color-hover); text-decoration: none; }
 .menu li{display: inline-block;position: relative}
 .menu li a{color:var(--site-text-color); opacity: 0.8;display: block;padding: 16px;font-size: 15px;font-weight: bold;}
 
-@media (min-width: 1190px) {
-  .menu > li.current-menu-item > a::before{ content: ""; position: absolute; left: 16px; right: 16px; bottom: 10px; height: 2px; background: #000; opacity:0.2;}
-}
-
 .icon-hamburger{display: none;}
 
 /* Quick search */
@@ -191,16 +187,17 @@ input.quick-search__input[type=search]{padding: 10px 3px;font-size: 13px;margin:
   .page-template-menu-black.scroll-down .header{background-color: var(--site-bg)}
 }
 
+.page-template-align-wide-fix .spacer,
 .page-template-blank .spacer,
 .page-template-contained-no-title .spacer{height:75px}
 
 @media (max-width: 1190px) {
+  .page-template-align-wide-fix .spacer,
   .page-template-menu-black .spacer,
   .page-template-blank .spacer,
   .page-template-contained-no-title .spacer{height:60px}
   .page-template-menu-black .header__content{border:none}
 } 
-
 
 
 /* Menu Dropdown */

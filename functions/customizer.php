@@ -310,6 +310,21 @@
 		'settings'   => 'nextawards_search_blog',
 		'type'   => 'text'			
 	)) );
+
+	/* Current Menu Item Style */
+	$wp_customize->add_setting( 'nextawards_current_menu_item_style' , array(
+	'default'   => 'No',
+	'transport' => 'refresh',
+		'sanitize_callback' => 'nextawards_sanitize_callback_function',
+	));
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'nextawards_current_menu_item_style_control', array(
+		'label'      => __( 'Current Menu Item Style (ex. Line, Pill, LinkColor, LinkColorHover)', 'nextawards' ),
+		'section'    => 'nextawards_header',
+		'settings'   => 'nextawards_current_menu_item_style',
+		'type'   => 'text'			
+	)) );
+
 	
 	/* Add setting for logo white uploader */
 	$wp_customize->add_setting( 'logo_white' , array(
