@@ -323,9 +323,9 @@ function nextawards_customize_css(){
 	} else if(esc_attr(get_theme_mod( 'nextawards_current_menu_item_style', 'no')) == "Pill"){
 		echo '@media (min-width: 1190px) { .menu > li.current-menu-item > a::before{ content: ""; position: absolute; left: 0px; right: 0px; bottom: 14px; height: 25px; background: #000; opacity:0.15;border-radius:30px;}}';
 	} else if(esc_attr(get_theme_mod( 'nextawards_current_menu_item_style', 'no')) == "LinkColor"){	
-		echo '.menu li.current-menu-item > a{color: '.esc_attr(get_theme_mod( 'nextawards_link_color', '#048ea0')).'}';
+		echo '.menu li.current-menu-item > a{color: '.esc_attr(get_theme_mod( 'nextawards_link_color', '#048ea0')).' !important}';
 	} else if(esc_attr(get_theme_mod( 'nextawards_current_menu_item_style', 'no')) == "LinkColorHover"){	
-		echo '.menu li.current-menu-item > a{color: '.esc_attr(get_theme_mod( 'nextawards_link_color_hover', '#105862')).'}';
+		echo '.menu li.current-menu-item > a{color: '.esc_attr(get_theme_mod( 'nextawards_link_color_hover', '#105862')).' !important}';
 	}
 
 
