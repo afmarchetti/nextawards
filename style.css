@@ -543,13 +543,16 @@ button[type=submit] { margin-top: 10px; padding: 15px 20px; color: #fff; text-tr
 
 /* Simple Utilities Class */
 @media (min-width: 1190px) {
+  .hide-desktop,
   .desk-hide{display: none;}
 }
 @media (max-width: 1190px) {
+  .hide-mobile,
   .sma-hide{display: none;}
 }
-
+.hide-all,
 .all-hide{display: none;}
+
 
 @media (max-width: 781px) {
   .sma-column-reverse{ flex-direction: column-reverse;}
@@ -689,10 +692,26 @@ button[type=submit] { margin-top: 10px; padding: 15px 20px; color: #fff; text-tr
 .reveal.is-inview { opacity: 1; transform: none; filter: none; }
 
 /* Clip-path effect */
-.reveal.reveal-clip{ height: 0; interpolate-size: allow-keywords; overflow: hidden; transition: height 1s cubic-bezier(.2,.7,.25,1), opacity .3s ease-out, transform .6s cubic-bezier(.2,.7,.25,1); will-change: height, opacity, transform; padding-bottom: 0px; }
+/* .reveal.reveal-clip{ 
+  height: 0; interpolate-size: allow-keywords; overflow: hidden; 
+  transition: height 1s cubic-bezier(.2,.7,.25,1), opacity .3s ease-out, transform .6s cubic-bezier(.2,.7,.25,1); 
+  will-change: height, opacity, transform; padding-bottom: 0px; 
+} */
+
+.reveal.reveal-clip{ 
+  clip-path: inset(0 0 100% 0);
+  -webkit-clip-path: inset(0 0 100% 0);
+  will-change: clip-path;
+}
+
+@keyframes revealClip {
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
 
 /* Clip-path active state */
-.reveal.reveal-clip.is-inview {height:auto; opacity: 1; padding-bottom: 5px;  }
+.reveal.reveal-clip.is-inview {animation: revealClip 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;will-change: clip-path;}
 
 
 /* Accessibility: disable animations */
