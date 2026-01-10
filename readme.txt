@@ -56,6 +56,9 @@ No data is saved in the database or transferred.
 
 == Changelog ==
 
+== 1.8.4 ==
+* fix menu logo white, fix reveal clip
+
 == 1.8.3 ==
 * fix menu color in trasparent template
 
