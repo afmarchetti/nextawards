@@ -50,7 +50,9 @@
 
           <a class="header__logo" href="<?php echo esc_url(home_url()); ?>">
           
-            <?php if ( $nextawards_logo_white && is_page_template( 'page-templates/menu-trasparent.php'  )) { ?>
+            <?php if (  ( $nextawards_logo_white && is_page_template( 'page-templates/menu-trasparent.php' )) || 
+                        ( $nextawards_logo_white && is_page_template( 'page-templates/align-wide-fix-trasparent.php' ))
+                      ) { ?>
 
                  <img class="header__logo_white-img hide-mobile" src="<?php echo esc_url( $nextawards_logo_white ); ?>" alt="<?php echo get_bloginfo( 'name' ); ?>">
                  <img class="header__logo-img hide-desktop" src="<?php echo esc_url( $nextawards_logo[0] ); ?>" alt="<?php echo get_bloginfo( 'name' ); ?>">
