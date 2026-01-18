@@ -57,6 +57,9 @@ No data is saved in the database or transferred.
 == Changelog ==
 
 == 1.8.5 ==
+* fix wide template big screen
+
+== 1.8.5 ==
 * add template wide fix transparent
 
 == 1.8.4 ==

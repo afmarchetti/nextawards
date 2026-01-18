@@ -314,7 +314,6 @@ function nextawards_customize_css(){
 		echo '.footer-container{ margin: 0 auto; padding: 0;max-width: 1300px;}';
 
 		echo '@media (min-width: 1450px){ .header__content,.footer-container, .footer-container .grid {max-width: 1500px;} } ';
-		echo '@media (min-width: 1800px){ .header__content, .footer-container, .footer-container .grid {max-width: 1700px;} }';
 
 	}
 
