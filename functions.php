@@ -328,7 +328,7 @@ function nextawards_customize_css(){
 	}
 
 
-	echo '@media (min-width: 1190px) {.page-template-menu-trasparent.scroll-down .header{background: '.esc_attr(get_theme_mod( 'nextawards_header_scroll_color', '#222222')).'!important}}';
+	echo '@media (min-width: 1190px) {.page-template-menu-trasparent.scroll-down .header, .page-template-align-wide-fix-trasparent.scroll-down .header{background: '.esc_attr(get_theme_mod( 'nextawards_header_scroll_color', '#222222')).'!important}}';
 
 	// secondary button
 	echo '.wp-block-button.is-style-secondary-button .wp-block-button__link { background-color: '.esc_attr(get_theme_mod( 'nextawards_secondary_button_color', '#ea5a39')).'; color: '.esc_attr(get_theme_mod( 'nextawards_secondary_button_text_color', '#ffffff')).';}';

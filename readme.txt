@@ -56,7 +56,10 @@ No data is saved in the database or transferred.
 
 == Changelog ==
 
-== 1.8.5 ==
+== 1.8.7 ==
+* fix color header scroll in fix width trasparent template
+
+== 1.8.6 ==
 * fix wide template big screen
 
 == 1.8.5 ==
