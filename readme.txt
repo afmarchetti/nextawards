@@ -35,6 +35,9 @@ To hide a element on mobile you can use the class .sma-hide, to hide on desktop 
 
 To reverse a columns on mobile (for media text layout perfect on mobile) use the class .sma-column-reverse
 
+To add parallax movement to elements, apply two classes: parallax-start-{S}-end-{E} (defines when the movement starts and ends in the viewport) and move-{M}{unit} (defines the total displacement in px or vh).
+
+
 == Installation ==
 
 1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
@@ -55,6 +58,10 @@ No data is saved in the database or transferred.
 * add option to 2,3,4 column footer
 
 == Changelog ==
+
+== 1.8.8 ==
+
+* add parallax engine
 
 == 1.8.7 ==
 * fix color header scroll in fix width trasparent template

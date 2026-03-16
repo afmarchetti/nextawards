@@ -12,9 +12,15 @@
  *  Base functionality
 /* ------------------------------------------------------------------------- */
 
+// fix bug wp 6.9 global block-styles
+add_action('init', function () {
+    if (!wp_style_is('global-styles', 'registered')) {
+        wp_register_style('global-styles', false);
+    }
+});
 
-	// Content width
-	if ( !isset( $content_width ) ) { $content_width = 720; }
+// Content width
+if ( !isset( $content_width ) ) { $content_width = 720; }
 
 
 /*  Theme setup
@@ -218,6 +224,7 @@ if ( ! function_exists( 'nextawards_styles' ) ) {
 
 }
 add_action( 'wp_enqueue_scripts', 'nextawards_styles' );
+
 
 /*  Register sidebars
 /* ------------------------------------ */

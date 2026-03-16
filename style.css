@@ -1,7 +1,7 @@
 /*
 Theme Name: 	Nextawards
 Description: 	Responsive Starter WordPress Theme (WooCommerce Ready) with: Minimal Style, 4 Header Style, 2 Menus, 11 Amazing Block Patterns, Trasparent Header Template, WhatsApp Chat, Cool animations, Light and fast, Full Site Editing Template! Inspired by Awards Winning Web Sites. Correct setup and installation in theme folder readme file ;)
-Version:     	1.8.7
+Version:     	1.8.8
 Author:     	Andrea Marchetti
 Site:         http://www.marchettidesign.net
 Text Domain: 	nextawards
@@ -771,7 +771,11 @@ button[type=submit] { margin-top: 10px; padding: 15px 20px; color: #fff; text-tr
 .duration-25 { transition-duration: 2.5s !important; animation-duration: 2.5s !important; }
 .duration-30 { transition-duration: 3s !important; animation-duration: 3s !important; }
 
-/* Animation System v2 End */
+/* Animation System Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  [class*="parallax-"] { transform: none !important; }
+}
 
 /* Animation on load 
 --------------------------------------------------------- */
