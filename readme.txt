@@ -59,6 +59,10 @@ No data is saved in the database or transferred.
 
 == Changelog ==
 
+== 1.8.9 ==
+
+* add button border radius option in customizer
+
 == 1.8.8 ==
 
 * add parallax engine

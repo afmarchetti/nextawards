@@ -341,6 +341,9 @@ function nextawards_customize_css(){
 	echo '.wp-block-button.is-style-secondary-button .wp-block-button__link { background-color: '.esc_attr(get_theme_mod( 'nextawards_secondary_button_color', '#ea5a39')).'; color: '.esc_attr(get_theme_mod( 'nextawards_secondary_button_text_color', '#ffffff')).';}';
 	echo '.wp-block-button.is-style-secondary-button .wp-block-button__link:hover { background-color: '.esc_attr(get_theme_mod( 'nextawards_secondary_button_hover_color', '#d33a32')).'; color: '.esc_attr(get_theme_mod( 'nextawards_secondary_button_text_color', '#ffffff')).';}';
 
+	// button border radius
+	echo '.wp-block-button .wp-block-button__link, .evi a{ border-radius: '.esc_attr(get_theme_mod( 'nextawards_button_border_radius', '99px')).'}';
+
 	echo '</style>';
 
 }
@@ -386,6 +389,7 @@ function nextawards_customize_css_iframe_editor() {
 			$nextawards_bg_color = get_background_color();
 
 			$nextawards_border_color = esc_attr(get_theme_mod( 'nextawards_border_color', '#222222'));
+			$nextawards_button_border_radius = esc_attr(get_theme_mod( 'nextawards_button_border_radius', '99px'));
 
 			$custom_css = "
 				.editor-styles-wrapper .wp-block-post-title,
@@ -401,6 +405,7 @@ function nextawards_customize_css_iframe_editor() {
 				.edit-post-visual-editor .editor-styles-wrapper .wp-block-button__link:not(.is-style-outline .wp-block-button__link):not(.is-style-secondary-button .wp-block-button__link),
 				body.editor-styles-wrapper .wp-block-button__link:not(.is-style-outline .wp-block-button__link):not(.is-style-secondary-button .wp-block-button__link){background-color: {$nextawards_link_color } }
 				body.editor-styles-wrapper .is-style-outline .wp-block-button__link{color: #{$nextawards_border_color}; }
+				.edit-post-visual-editor .editor-styles-wrapper .wp-block-button__link {border-radius: {$nextawards_button_border_radius}; }
 				";
 			wp_add_inline_style( 'custom-editor-style', $custom_css );
     }

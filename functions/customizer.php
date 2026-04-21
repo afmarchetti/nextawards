@@ -325,6 +325,20 @@
 		'type'   => 'text'			
 	)) );
 
+	/* Button Border Radius */
+	$wp_customize->add_setting( 'nextawards_button_border_radius' , array(
+	'default'   => '99px',
+	'transport' => 'refresh',
+		'sanitize_callback' => 'nextawards_sanitize_callback_function',
+	));
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'nextawards_button_border_radius_control', array(
+		'label'      => __( 'Button Border Radius (ex. 10px)', 'nextawards' ),
+		'section'    => 'nextawards_header',
+		'settings'   => 'nextawards_button_border_radius',
+		'type'   => 'text'			
+	)) );
+
 	
 	/* Add setting for logo white uploader */
 	$wp_customize->add_setting( 'logo_white' , array(
