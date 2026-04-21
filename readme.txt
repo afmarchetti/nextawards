@@ -59,6 +59,10 @@ No data is saved in the database or transferred.
 
 == Changelog ==
 
+= 1.9.0 ==
+
+* fix "add button border radius option in customizer" backend css
+
 == 1.8.9 ==
 
 * add button border radius option in customizer

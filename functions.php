@@ -405,7 +405,9 @@ function nextawards_customize_css_iframe_editor() {
 				.edit-post-visual-editor .editor-styles-wrapper .wp-block-button__link:not(.is-style-outline .wp-block-button__link):not(.is-style-secondary-button .wp-block-button__link),
 				body.editor-styles-wrapper .wp-block-button__link:not(.is-style-outline .wp-block-button__link):not(.is-style-secondary-button .wp-block-button__link){background-color: {$nextawards_link_color } }
 				body.editor-styles-wrapper .is-style-outline .wp-block-button__link{color: #{$nextawards_border_color}; }
-				.edit-post-visual-editor .editor-styles-wrapper .wp-block-button__link {border-radius: {$nextawards_button_border_radius}; }
+
+				.edit-post-visual-editor .editor-styles-wrapper .wp-block-button__link,
+				body.editor-styles-wrapper .wp-block-button__link {border-radius: {$nextawards_button_border_radius}; }
 				";
 			wp_add_inline_style( 'custom-editor-style', $custom_css );
     }
