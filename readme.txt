@@ -59,6 +59,10 @@ No data is saved in the database or transferred.
 
 == Changelog ==
 
+= 1.9.1 ==
+
+* fix footer background css
+
 = 1.9.0 ==
 
 * fix "add button border radius option in customizer" backend css

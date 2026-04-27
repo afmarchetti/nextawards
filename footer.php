@@ -10,27 +10,31 @@
 ?>
 
 
-<footer class="pt-3 pb-3 footer-container" role="contentinfo">
+<footer class="pt-3 pb-3 footer-content" role="contentinfo">
 
-	<div class="col-100">
-		<hr class="mb-3">
-	</div>
+	<div class="footer-container">
 
-	<div class="grid">
-
-			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer') ) : ?>
-
-			<?php endif; ?>
-		
-	</div>
-
-	<div class="grid">
-
-		<div class="col-50">
-			<p class="sma-text-center"><?php esc_html_e('&copy; Copyright ', 'nextawards'); ?> <?php echo date("o");?>   <?php bloginfo('name'); ?>  </p>
+		<div class="col-100">
+			<hr class="mb-3">
 		</div>
-		<div class="col-50">
-			<p class="alignright sma-text-center scroll"> <a href="#content"><i class="fa fa-angle-double-up"></i> <?php esc_html_e('Top ', 'nextawards'); ?></a></p>
+
+		<div class="grid">
+
+				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer') ) : ?>
+
+				<?php endif; ?>
+			
+		</div>
+
+		<div class="grid">
+
+			<div class="col-50">
+				<p class="sma-text-center"><?php esc_html_e('&copy; Copyright ', 'nextawards'); ?> <?php echo date("o");?>   <?php bloginfo('name'); ?>  </p>
+			</div>
+			<div class="col-50">
+				<p class="alignright sma-text-center scroll"> <a href="#content"><i class="fa fa-angle-double-up"></i> <?php esc_html_e('Top ', 'nextawards'); ?></a></p>
+			</div>
+
 		</div>
 
 	</div>
