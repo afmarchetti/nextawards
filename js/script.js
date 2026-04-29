@@ -317,9 +317,9 @@ simpleParallax(".parallax-cover .wp-block-cover__image-background", 15);
       // Top of element relative to viewport, computed from CACHED original
       // position — never polluted by the active translateY.
       const rectTop    = originTop - scrollY;
-      const startLine  = vh * (1 - startPct);
-      const endLine    = vh * (1 - endPct);    // negative endPct → endLine > vh
-      const totalRange = endLine - startLine;
+      const startLine  = vh * startPct;
+      const endLine    = vh * endPct;          // negative endPct → endLine < 0 (above viewport top)
+      const totalRange = startLine - endLine;
       const pastStart  = startLine - rectTop;
 
       if (pastStart <= 0) {
@@ -328,7 +328,7 @@ simpleParallax(".parallax-cover .wp-block-cover__image-background", 15);
       }
 
       const progress   = Math.min(pastStart / totalRange, 1);
-      const unitPx     = moveUnit === 'vh' ? Math.abs(moveAmount) * (vh / 100) : Math.abs(moveAmount);
+      const unitPx     = moveUnit === 'vh' ? moveAmount * (vh / 100) : moveAmount;
       const translateY = (progress * unitPx * mobileFactor).toFixed(2);
 
       el.style.transform = `translateY(${translateY}px)`;
