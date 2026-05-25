@@ -5,36 +5,7 @@
             "contentSize": "850px",
             "wideSize": "1300px"
         },
-        "appearanceTools": true, 
-		"color": {
-			"gradients": [
-				{
-					"name": "Black",
-					"slug": "black",
-					"gradient": "linear-gradient(135deg, rgba(0, 0, 0, 1), rgba(20, 17, 30, 0))"
-				},
-				{
-					"name": "Brown",
-					"slug": "brow",
-					"gradient": "linear-gradient(135deg, rgba(81, 31, 31, 1), rgba(97, 97, 97, 0))"
-				},
-				{
-					"name": "Blue",
-					"slug": "blue",
-					"gradient": "linear-gradient(135deg, rgba(84, 73, 113, 1), rgba(35, 26, 28, 1))"
-				},
-				{
-					"name": "Green",
-					"slug": "green",
-					"gradient": "linear-gradient(135deg, rgba(101, 216, 82, 1), rgba(27, 216, 179, 1))"
-				},
-				{
-					"name": "Purple",
-					"slug": "purple",
-					"gradient": "linear-gradient(135deg, rgba(192, 43, 230, 1), rgba(74, 38, 173, 1))"
-				}
-			]
-		},
+        "appearanceTools": true,
 		"shadow": {
 			"defaultPresets": false,
             "presets": [

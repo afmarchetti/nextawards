@@ -59,19 +59,23 @@ No data is saved in the database or transferred.
 
 == Changelog ==
 
-= 1.9.3 ==
+== 1.9.4 ==
+
+* add color system with global style preset and gradients
+
+== 1.9.3 ==
 
 * fix parallax system math calc
 
-= 1.9.2 ==
+== 1.9.2 ==
 
 * fix hide css classes
 
-= 1.9.1 ==
+== 1.9.1 ==
 
 * fix footer background css
 
-= 1.9.0 ==
+== 1.9.0 ==
 
 * fix "add button border radius option in customizer" backend css
 

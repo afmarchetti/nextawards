@@ -55,7 +55,7 @@
 	));
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nextawards_link_color_control', array(
-		'label'      => __( 'Link Color', 'nextawards' ),
+		'label'      => __( 'Link Color (Accent Color)', 'nextawards' ),
 		'section'    => 'colors',
 		'settings'   => 'nextawards_link_color',
 	)));
@@ -69,7 +69,7 @@
 	));
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nextawards_link_color_hover_control', array(
-		'label'      => __( 'Link Color Hover', 'nextawards' ),
+		'label'      => __( 'Link Color Hover (Accent Color Hover)', 'nextawards' ),
 		'section'    => 'colors',
 		'settings'   => 'nextawards_link_color_hover',
 	)));
@@ -82,27 +82,27 @@
 	));
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nextawards_header_color_control', array(
-		'label'      => __( 'Header Color', 'nextawards' ),
+		'label'      => __( 'Header Background (Light Color)', 'nextawards' ),
 		'section'    => 'colors',
 		'settings'   => 'nextawards_header_color',
 	)));
 
 	/* Footer Color */
 	$wp_customize->add_setting( 'nextawards_footer_color' , array(
-		'default'   => '#E4E4E4',
+		'default'   => '#cecece',
 		'transport' => 'refresh',
 			'sanitize_callback' => 'sanitize_hex_color',
 		));
 	
 		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nextawards_footer_color_control', array(
-			'label'      => __( 'Footer Color', 'nextawards' ),
+			'label'      => __( 'Footer Background (Medium Color)', 'nextawards' ),
 			'section'    => 'colors',
 			'settings'   => 'nextawards_footer_color',
 		)));
 
 	/* Footer Text Color */
 	$wp_customize->add_setting( 'nextawards_footer_text_color' , array(
-		'default'   => '#000',
+		'default'   => '#333333',
 		'transport' => 'refresh',
 			'sanitize_callback' => 'sanitize_hex_color',
 		));
@@ -121,7 +121,7 @@
 		));
 	
 		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nextawards_header_scroll_color_control', array(
-			'label'      => __( 'Header Scroll Down Color', 'nextawards' ),
+			'label'      => __( 'Header Scroll Down (Dark Color)', 'nextawards' ),
 			'section'    => 'colors',
 			'settings'   => 'nextawards_header_scroll_color',
 		)));
@@ -147,7 +147,7 @@
 	));
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'nextawards_secondary_button_color_control', array(
-		'label'      => __( 'Secondary Button Color', 'nextawards' ),
+		'label'      => __( 'Secondary Button Color (Secondary Accent Color)', 'nextawards' ),
 		'section'    => 'colors',
 		'settings'   => 'nextawards_secondary_button_color',
 	)));

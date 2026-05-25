@@ -91,29 +91,34 @@ if ( ! function_exists( 'nextawards_setup' ) ) {
 		// Adds support for editor color palette.
 		add_theme_support( 'editor-color-palette', array(
 			array(
-				'name'  => __( 'Light gray', 'nextawards' ),
+				'name'  => __( 'Light Color', 'nextawards' ),
 				'slug'  => 'light-gray',
-				'color'	=> '#f5f5f5',
+				'color'	=> esc_attr(get_theme_mod( 'nextawards_header_color', '#E4E4E4')),
 			),
 			array(
-				'name'  => __( 'Medium gray', 'nextawards' ),
+				'name'  => __( 'Medium Color', 'nextawards' ),
 				'slug'  => 'medium-gray',
-				'color' => '#999',
+				'color' => esc_attr(get_theme_mod( 'nextawards_footer_color', '#cecece')),
 			),
 			array(
-				'name'  => __( 'Dark gray', 'nextawards' ),
+				'name'  => __( 'Dark Color', 'nextawards' ),
 				'slug'  => 'dark-gray',
-				'color' => '#333',
+				'color' => esc_attr(get_theme_mod( 'nextawards_header_scroll_color', '#222222')),
 			),
 			array(
-				'name'  => __( 'Link Color', 'nextawards' ),
+				'name'  => __( 'Accent Color', 'nextawards' ),
 				'slug'  => 'link-color',
 				'color' => esc_attr(get_theme_mod( 'nextawards_link_color', '#048ea0')),
 			),
 			array(
-				'name'  => __( 'Link Color Hover', 'nextawards' ),
+				'name'  => __( 'Accent Color Hover', 'nextawards' ),
 				'slug'  => 'link-color-hover',
 				'color' => esc_attr(get_theme_mod( 'nextawards_link_color_hover', '#105862')),
+			),
+			array(
+				'name'  => __( 'Secondary Accent Color', 'nextawards' ),
+				'slug'  => 'secondary-color',
+				'color' => esc_attr(get_theme_mod( 'nextawards_secondary_button_color', '#ea5a39')),
 			),
 		));
 
@@ -180,6 +185,107 @@ if ( ! function_exists( 'nextawards_setup' ) ) {
 
 }
 add_action( 'after_setup_theme', 'nextawards_setup' );
+
+
+/*  Dynamic gradients from Customizer colors
+/* ------------------------------------ */
+if ( ! function_exists( 'nextawards_hex_to_rgba' ) ) {
+	function nextawards_hex_to_rgba( $hex, $alpha = 1 ) {
+		$hex = ltrim( $hex, '#' );
+		if ( strlen( $hex ) === 3 ) {
+			$hex = $hex[0].$hex[0].$hex[1].$hex[1].$hex[2].$hex[2];
+		}
+		$r = hexdec( substr( $hex, 0, 2 ) );
+		$g = hexdec( substr( $hex, 2, 2 ) );
+		$b = hexdec( substr( $hex, 4, 2 ) );
+		return "rgba({$r}, {$g}, {$b}, {$alpha})";
+	}
+}
+
+add_filter( 'wp_theme_json_data_theme', function( $theme_json ) {
+	$dark            = get_theme_mod( 'nextawards_header_scroll_color',        '#222222' );
+	$light           = get_theme_mod( 'nextawards_header_color',               '#E4E4E4' );
+	$medium          = get_theme_mod( 'nextawards_footer_color',               '#cecece' );
+	$accent          = get_theme_mod( 'nextawards_link_color',                 '#048ea0' );
+	$hover           = get_theme_mod( 'nextawards_link_color_hover',           '#105862' );
+	$secondary       = get_theme_mod( 'nextawards_secondary_button_color',       '#ea5a39' );
+	$secondary_hover = get_theme_mod( 'nextawards_secondary_button_hover_color', '#d33a32' );
+
+	$legacy = array(
+		array(
+			'name'     => 'Black',
+			'slug'     => 'black',
+			'gradient' => 'linear-gradient(135deg, rgba(0, 0, 0, 1), rgba(20, 17, 30, 0))',
+		),
+		array(
+			'name'     => 'Brown',
+			'slug'     => 'brow',
+			'gradient' => 'linear-gradient(135deg, rgba(81, 31, 31, 1), rgba(97, 97, 97, 0))',
+		),
+		array(
+			'name'     => 'Blue',
+			'slug'     => 'blue',
+			'gradient' => 'linear-gradient(135deg, rgba(84, 73, 113, 1), rgba(35, 26, 28, 1))',
+		),
+		array(
+			'name'     => 'Green',
+			'slug'     => 'green',
+			'gradient' => 'linear-gradient(135deg, rgba(101, 216, 82, 1), rgba(27, 216, 179, 1))',
+		),
+		array(
+			'name'     => 'Purple',
+			'slug'     => 'purple',
+			'gradient' => 'linear-gradient(135deg, rgba(192, 43, 230, 1), rgba(74, 38, 173, 1))',
+		),
+	);
+
+	$dynamic = array(
+		array(
+			'name'     => 'Dark Fade',
+			'slug'     => 'dark-fade',
+			'gradient' => "linear-gradient(135deg, {$dark} 0%, ".nextawards_hex_to_rgba( $dark, 0 )." 100%)",
+		),
+		array(
+			'name'     => 'Light to Medium',
+			'slug'     => 'light-to-medium',
+			'gradient' => "linear-gradient(135deg, {$light} 0%, {$medium} 100%)",
+		),
+		array(
+			'name'     => 'Accent Fade',
+			'slug'     => 'accent-fade',
+			'gradient' => "linear-gradient(135deg, {$accent} 0%, ".nextawards_hex_to_rgba( $accent, 0 )." 100%)",
+		),
+		array(
+			'name'     => 'Secondary Blend',
+			'slug'     => 'secondary-blend',
+			'gradient' => "linear-gradient(135deg, {$secondary} 0%, ".nextawards_hex_to_rgba( $secondary_hover, 0.4 )." 100%)",
+		),
+		array(
+			'name'     => 'Dark to Accent',
+			'slug'     => 'dark-to-accent',
+			'gradient' => "linear-gradient(135deg, {$dark} 0%, {$accent} 100%)",
+		),
+		array(
+			'name'     => 'Dark to Secondary',
+			'slug'     => 'dark-to-secondary',
+			'gradient' => "linear-gradient(135deg, {$dark} 0%, {$secondary} 100%)",
+		),
+		array(
+			'name'     => 'Brand Crossover',
+			'slug'     => 'accent-to-secondary',
+			'gradient' => "linear-gradient(135deg, {$accent} 0%, ".nextawards_hex_to_rgba( $secondary, 0.8 )." 100%)",
+		),
+	);
+
+	return $theme_json->update_with( array(
+		'version'  => 2,
+		'settings' => array(
+			'color' => array(
+				'gradients' => array_merge( $legacy, $dynamic ),
+			),
+		),
+	) );
+} );
 
 
 /*  Enqueue javascript front
@@ -270,8 +376,25 @@ function nextawards_customize_css(){
 	$nextawards_google_font_body = str_replace("+", " ", $nextawards_google_font_body);
 
 
+	$nextawards_light     = esc_attr(get_theme_mod( 'nextawards_header_color',          '#E4E4E4'));
+	$nextawards_medium    = esc_attr(get_theme_mod( 'nextawards_footer_color',          '#cecece'));
+	$nextawards_dark      = esc_attr(get_theme_mod( 'nextawards_header_scroll_color',   '#222222'));
+	$nextawards_accent    = esc_attr(get_theme_mod( 'nextawards_link_color',            '#048ea0'));
+	$nextawards_accent_h  = esc_attr(get_theme_mod( 'nextawards_link_color_hover',      '#105862'));
+	$nextawards_secondary = esc_attr(get_theme_mod( 'nextawards_secondary_button_color','#ea5a39'));
+
 	echo '<style type="text/css">';
-	echo ':root { --site-bg: #'.$nextawards_bg_color.'; --link-color: '.esc_attr(get_theme_mod( 'nextawards_link_color', '#048ea0')).'; --link-color-hover: '.esc_attr(get_theme_mod( 'nextawards_link_color_hover', '#105862')).'; }';
+	echo ':root {'
+		.' --site-bg: #'.$nextawards_bg_color.';'
+		.' --link-color: '.$nextawards_accent.';'
+		.' --link-color-hover: '.$nextawards_accent_h.';'
+		.' --wp--preset--color--light-gray: '.$nextawards_light.';'
+		.' --wp--preset--color--medium-gray: '.$nextawards_medium.';'
+		.' --wp--preset--color--dark-gray: '.$nextawards_dark.';'
+		.' --wp--preset--color--link-color: '.$nextawards_accent.';'
+		.' --wp--preset--color--link-color-hover: '.$nextawards_accent_h.';'
+		.' --wp--preset--color--secondary-color: '.$nextawards_secondary.';'
+		.' }';
 	echo 'body, :root :where(body), p, ul, li, ol{font-family: '.$nextawards_google_font_body.'}';
 	echo 'h1,h2,h3,h4,h5,h6{font-family: '.$nextawards_google_font.'}';
 	echo '.wp-block-button__link:not(.is-style-outline .wp-block-button__link):not(.is-style-secondary-button .wp-block-button__link), input[type=submit].wpcf7-submit{background-color: '.esc_attr(get_theme_mod( 'nextawards_link_color', '#048ea0')).'}';
@@ -293,23 +416,26 @@ function nextawards_customize_css(){
 		echo '.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit:hover {background-color: '.esc_attr(get_theme_mod( 'nextawards_link_color_hover', '#105862')).'!important;color:#fff}';
 	}
 
-	echo '.has-light-gray-background-color {background-color: #f5f5f5 }';
-	echo '.has-light-gray-color  {color: #f5f5f5 }';
+	echo '.has-light-gray-background-color {background-color: '.esc_attr(get_theme_mod( 'nextawards_header_color', '#E4E4E4')).' }';
+	echo '.has-light-gray-color  {color: '.esc_attr(get_theme_mod( 'nextawards_header_color', '#E4E4E4')).' }';
 
-	echo '.has-medium-gray-background-color {background-color: #999 }';
-	echo '.has-medium-gray-color  {color: #999 }';
+	echo '.has-medium-gray-background-color {background-color: '.esc_attr(get_theme_mod( 'nextawards_footer_color', '#cecece')).' }';
+	echo '.has-medium-gray-color  {color: '.esc_attr(get_theme_mod( 'nextawards_footer_color', '#cecece')).' }';
 
-	echo '.has-dark-gray-background-color {background-color: #333 }';
-	echo '.has-dark-gray-color {color: #333 }';
+	echo '.has-dark-gray-background-color {background-color: '.esc_attr(get_theme_mod( 'nextawards_header_scroll_color', '#222222')).' }';
+	echo '.has-dark-gray-color {color: '.esc_attr(get_theme_mod( 'nextawards_header_scroll_color', '#222222')).' }';
 
 	echo '.has-link-color-background-color {background-color: '.esc_attr(get_theme_mod( 'nextawards_link_color', '#048ea0')).';}';
 	echo '.has-link-color-color {color: '.esc_attr(get_theme_mod( 'nextawards_link_color', '#048ea0')).';}';
 
-	echo '.has-link-color-hover-background-color {background-color: '.esc_attr(get_theme_mod( 'nextawards_link_color_hover', '#048ea0')).';}';
-	echo '.has-link-color-hover-color {color: '.esc_attr(get_theme_mod( 'nextawards_link_color_hover', '#048ea0')).';}';
+	echo '.has-link-color-hover-background-color {background-color: '.esc_attr(get_theme_mod( 'nextawards_link_color_hover', '#105862')).';}';
+	echo '.has-link-color-hover-color {color: '.esc_attr(get_theme_mod( 'nextawards_link_color_hover', '#105862')).';}';
+
+	echo '.has-secondary-color-background-color {background-color: '.esc_attr(get_theme_mod( 'nextawards_secondary_button_color', '#ea5a39')).';}';
+	echo '.has-secondary-color-color {color: '.esc_attr(get_theme_mod( 'nextawards_secondary_button_color', '#ea5a39')).';}';
 
 	// footer color
-	echo '.footer-content {background-color: '.esc_attr(get_theme_mod( 'nextawards_footer_color', '#E4E4E4')).'; color: '.esc_attr(get_theme_mod( 'nextawards_footer_text_color', '#000')).'}';
+	echo '.footer-content {background-color: '.esc_attr(get_theme_mod( 'nextawards_footer_color', '#cecece')).'; color: '.esc_attr(get_theme_mod( 'nextawards_footer_text_color', '#333')).'}';
 	echo '.footer-content hr {border-color: '.esc_attr(get_theme_mod( 'nextawards_border_color', '#222222')).'}';
 
 	if(esc_attr(get_theme_mod( 'nextawards_search_blog', 'no')) == "Yes"){
