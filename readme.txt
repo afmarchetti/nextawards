@@ -59,6 +59,10 @@ No data is saved in the database or transferred.
 
 == Changelog ==
 
+== 1.9.5 ==
+
+* add intalic font settings in customizer, add font setting in gutenberg, add weight settings in gutenberg 
+
 == 1.9.4 ==
 
 * add color system with global style preset and gradients

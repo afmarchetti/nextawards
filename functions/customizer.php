@@ -44,7 +44,22 @@
 		'label'      => __( 'Google Font Body (ex. Roboto )', 'nextawards' ),
 		'section'    => 'nextawards_typography',
 		'settings'   => 'nextawards_google_font_body',
-		'type'   => 'text'			
+		'type'   => 'text'
+	)));
+
+	/* Italic Font and Style (system font + weight applicato a <em>) */
+	$wp_customize->add_setting( 'nextawards_italic_font_style' , array(
+		'default'   => '',
+		'transport' => 'refresh',
+		'sanitize_callback' => 'nextawards_sanitize_callback_function',
+	));
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'nextawards_italic_font_style_control', array(
+		'label'       => __( 'Italic Font and Style in Headings (ex. Verdana,400)', 'nextawards' ),
+		'description' => __( 'Supported: Arial, Helvetica, Verdana, Tahoma, Trebuchet MS, Georgia, Times New Roman, Courier New. Weight: 400 or 700.', 'nextawards' ),
+		'section'    => 'nextawards_typography',
+		'settings'   => 'nextawards_italic_font_style',
+		'type'   => 'text'
 	)));
 
 	/* Link color */

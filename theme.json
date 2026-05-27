@@ -106,7 +106,7 @@
             "lineHeight": true,
             "fontStyle": true,
             "fluid": true,
-            "fontWeight": false,
+            "fontWeight": true,
             "fontSizes": [
                 {
 					"fluid": {

@@ -211,6 +211,67 @@ add_filter( 'wp_theme_json_data_theme', function( $theme_json ) {
 	$secondary       = get_theme_mod( 'nextawards_secondary_button_color',       '#ea5a39' );
 	$secondary_hover = get_theme_mod( 'nextawards_secondary_button_hover_color', '#d33a32' );
 
+	$google_heading = str_replace( '+', ' ', get_theme_mod( 'nextawards_google_font',      'Barlow' ) );
+	$google_body    = str_replace( '+', ' ', get_theme_mod( 'nextawards_google_font_body', 'Barlow' ) );
+
+	$font_families = array(
+		array(
+			'name'       => sprintf( __( 'Theme Headings (%s)', 'nextawards' ), $google_heading ),
+			'slug'       => 'theme-headings',
+			'fontFamily' => '"' . $google_heading . '", sans-serif',
+		),
+		array(
+			'name'       => sprintf( __( 'Theme Body (%s)', 'nextawards' ), $google_body ),
+			'slug'       => 'theme-body',
+			'fontFamily' => '"' . $google_body . '", sans-serif',
+		),
+		array(
+			'name'       => 'System',
+			'slug'       => 'system',
+			'fontFamily' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif',
+		),
+		array(
+			'name'       => 'Arial',
+			'slug'       => 'arial',
+			'fontFamily' => 'Arial, Helvetica, sans-serif',
+		),
+		array(
+			'name'       => 'Helvetica',
+			'slug'       => 'helvetica',
+			'fontFamily' => '"Helvetica Neue", Helvetica, Arial, sans-serif',
+		),
+		array(
+			'name'       => 'Verdana',
+			'slug'       => 'verdana',
+			'fontFamily' => 'Verdana, Geneva, sans-serif',
+		),
+		array(
+			'name'       => 'Tahoma',
+			'slug'       => 'tahoma',
+			'fontFamily' => 'Tahoma, Geneva, sans-serif',
+		),
+		array(
+			'name'       => 'Trebuchet MS',
+			'slug'       => 'trebuchet',
+			'fontFamily' => '"Trebuchet MS", "Lucida Grande", sans-serif',
+		),
+		array(
+			'name'       => 'Georgia',
+			'slug'       => 'georgia',
+			'fontFamily' => 'Georgia, "Times New Roman", serif',
+		),
+		array(
+			'name'       => 'Times New Roman',
+			'slug'       => 'times',
+			'fontFamily' => '"Times New Roman", Times, serif',
+		),
+		array(
+			'name'       => 'Courier New',
+			'slug'       => 'courier',
+			'fontFamily' => '"Courier New", Courier, monospace',
+		),
+	);
+
 	$legacy = array(
 		array(
 			'name'     => 'Black',
@@ -282,6 +343,9 @@ add_filter( 'wp_theme_json_data_theme', function( $theme_json ) {
 		'settings' => array(
 			'color' => array(
 				'gradients' => array_merge( $legacy, $dynamic ),
+			),
+			'typography' => array(
+				'fontFamilies' => $font_families,
 			),
 		),
 	) );
@@ -363,6 +427,32 @@ function nextawards_customize_register( $wp_customize ) {
 	
 }
 add_action( 'customize_register', 'nextawards_customize_register' );
+
+/* Build CSS rule for <em> from "Font,Weight" customizer value */
+/* ------------------------------------ */
+function nextawards_italic_em_css( $selector = 'em' ) {
+	$raw = trim( get_theme_mod( 'nextawards_italic_font_style', '' ) );
+	if ( $raw === '' ) {
+		return '';
+	}
+	$parts  = array_map( 'trim', explode( ',', $raw, 2 ) );
+	$font   = isset( $parts[0] ) ? preg_replace( '/[^A-Za-z0-9 \-]/', '', $parts[0] ) : '';
+	$weight = isset( $parts[1] ) ? preg_replace( '/[^A-Za-z0-9]/', '', $parts[1] ) : '';
+
+	$decls = '';
+	if ( $font !== '' ) {
+		$css_font = ( strpos( $font, ' ' ) !== false ) ? '"' . $font . '"' : $font;
+		$decls   .= 'font-family:' . $css_font . ';';
+	}
+	if ( $weight !== '' ) {
+		$decls .= 'font-weight:' . $weight . ';';
+	}
+	if ( $decls === '' ) {
+		return '';
+	}
+	return $selector . '{' . $decls . '}';
+}
+
 
 /* Customizer CSS Front-end */
 /* ------------------------------------ */
@@ -470,6 +560,9 @@ function nextawards_customize_css(){
 	// button border radius
 	echo '.wp-block-button .wp-block-button__link, .evi a{ border-radius: '.esc_attr(get_theme_mod( 'nextawards_button_border_radius', '99px')).'}';
 
+	// italic <em> custom font + weight (from customizer) — only inside headings in #content
+	echo nextawards_italic_em_css( '#content :is(h1,h2,h3,h4,h5,h6) em' );
+
 	echo '</style>';
 
 }
@@ -535,6 +628,7 @@ function nextawards_customize_css_iframe_editor() {
 				.edit-post-visual-editor .editor-styles-wrapper .wp-block-button__link,
 				body.editor-styles-wrapper .wp-block-button__link {border-radius: {$nextawards_button_border_radius}; }
 				";
+			$custom_css .= nextawards_italic_em_css( '.editor-styles-wrapper :is(h1,h2,h3,h4,h5,h6) em' );
 			wp_add_inline_style( 'custom-editor-style', $custom_css );
     }
 }
